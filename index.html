@@ -5,751 +5,1432 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="We are Team Vayu — a group of elite drone engineers pushing the boundaries of innovation. Join us or collaborate today.">
-  <title>Home | Team Vayu</title>
-  <script>document.documentElement.className += ' js';</script>
-  <style>
-    .preloader {
-      position: fixed;
-      inset: 0;
-      z-index: 99999;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: #000;
-    }
-    body.preloading { overflow: hidden; }
-    body.preloading > *:not(.preloader) {
-      opacity: 0;
-      visibility: hidden;
-    }
-  </style>
-  <noscript>
-    <style>
-      body.preloading > *:not(.preloader) { opacity: 1; visibility: visible; }
-      .preloader { display: none; }
-    </style>
-  </noscript>
+    content="Team VAYU — Official student aerospace and UAV engineering team from Institute of Engineering & Management (IEM), Kolkata. Designing, building, and flight testing next-generation aerial systems.">
+  <meta name="keywords" content="Team VAYU, IEM Kolkata, UAV, Aerospace, Drone, Fixed Wing, VTOL, Autonomous Flight, Engineering">
+  <meta name="author" content="Team VAYU - IEM Kolkata">
+  <title>TEAM VAYU | Aerospace & UAV Engineering — IEM Kolkata</title>
 
+  <!-- Google Fonts: Space Grotesk, Inter, Space Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/vayu-logo.png">
+
+  <!-- Core Stylesheet -->
   <link rel="stylesheet" href="style.css">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Team Vayu",
-    "url": "https://www.teamvayu.in",
+    "@type": "EducationalOrganization",
+    "name": "Team VAYU",
+    "parentOrganization": "Institute of Engineering & Management (IEM), Kolkata",
+    "url": "https://pathikrick522-web.github.io/vayu-website/",
     "sameAs": [
-      "https://www.instagram.com/teamvayu/",
-      "https://www.linkedin.com/company/teamvayu/"
+      "https://www.instagram.com/teamvayu.iemk/"
     ]
   }
   </script>
 </head>
 
-<body class="preloading" bgcolor="black">
+<body>
 
-  <!-- ===== PRELOADER ===== -->
-  <div class="preloader" id="preloader" role="status" aria-label="Loading Team Vayu">
-    <div class="preloader-logo-container">
-      <img class="preloader-logo" src="images/vayu-logo.png" alt="Team Vayu Logo" 
-           style="max-width: 160px; max-height: 120px; object-fit: contain; filter: drop-shadow(0 0 25px rgba(200,200,200,0.4));">
-    </div>
-    <div class="preloader-title">TEAM VAYU</div>
-    <div class="preloader-sub">DESIGN&nbsp;|&nbsp;BUILD&nbsp;|&nbsp;FLY</div>
-    <div class="preloader-track">
-      <div class="preloader-bar" id="preloaderBar"></div>
-    </div>
-    <div class="preloader-pct" id="preloaderPct">0%</div>
-  </div>
+  <!-- Background Grid & Telemetry Ambient Lines -->
+  <div class="tech-grid-bg" aria-hidden="true"></div>
+  <div class="vignette-overlay" aria-hidden="true"></div>
 
-  <!-- ===== TOP HEADER NAV ===== -->
-  <nav class="header" id="mainHeader">
-    <div class="header-top">
-      <a href="index.html" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
-        <div id="logo_header">
-          <img src="images/vayu-logo.png" alt="Team Vayu Logo" style="height: 44px; width: auto; object-fit: contain;">
+  <!-- =========================================================
+       STICKY AEROSPACE NAVIGATION BAR
+       ========================================================= -->
+  <header class="vayu-header" id="vayuHeader">
+    <div class="header-container">
+      
+      <!-- Logo & University Affiliation -->
+      <a href="#hero" class="brand-link" aria-label="Team VAYU Home">
+        <div class="brand-logo-frame">
+          <img src="images/vayu-logo.png" alt="Team VAYU Logo" class="brand-logo-img">
         </div>
-        <span style="font-family: var(--font-brand); font-weight: 800; font-size: 1.25rem; letter-spacing: 3px; color: var(--white);">TEAM <span style="color: var(--silver-light);">VAYU</span></span>
+        <div class="brand-text-block">
+          <span class="brand-title">TEAM <span class="accent-glow">VAYU</span></span>
+          <span class="brand-sub">IEM • KOLKATA // UAV LAB</span>
+        </div>
       </a>
 
-      <ul class="header-content" style="list-style-type: none;">
-        <li class="social-icon-item"><a id="facebook-link" href="#" target="_blank"><i class="fab fa-facebook-f icon"></i></a></li>
-        <li class="social-icon-item"><a id="linkedin-link" href="#" target="_blank"><i class="fab fa-linkedin-in icon"></i></a></li>
-        <li class="social-icon-item"><a id="youtube-link" href="#" target="_blank"><i class="fab fa-youtube icon"></i></a></li>
-        <li class="social-icon-item"><a id="instagram-link" href="#" target="_blank"><i class="fab fa-instagram icon"></i></a></li>
-      </ul>
+      <!-- Desktop Navigation Links (01 to 10) -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active"><span class="nav-num">01</span> HOME</a></li>
+          <li><a href="#about" class="nav-link"><span class="nav-num">02</span> ABOUT</a></li>
+          <li><a href="#projects" class="nav-link"><span class="nav-num">03</span> PROJECTS</a></li>
+          <li><a href="#competitions" class="nav-link"><span class="nav-num">04</span> COMPETITIONS</a></li>
+          <li><a href="#team" class="nav-link"><span class="nav-num">05</span> TEAM</a></li>
+          <li><a href="#timeline" class="nav-link"><span class="nav-num">06</span> TIMELINE</a></li>
+          <li><a href="#achievements" class="nav-link"><span class="nav-num">07</span> ACHIEVEMENTS</a></li>
+          <li><a href="#blog" class="nav-link"><span class="nav-num">08</span> BLOG</a></li>
+          <li><a href="#gallery" class="nav-link"><span class="nav-num">09</span> GALLERY</a></li>
+          <li><a href="#contact" class="nav-link"><span class="nav-num">10</span> CONTACT</a></li>
+        </ul>
+      </nav>
 
-      <!-- Hamburger -->
-      <a class="nav-hamburger" href="javascript:void(0);" id="hamburger">
-        <span class="nav-hamburger-line"></span>
-        <span class="nav-hamburger-line"></span>
-        <span class="nav-hamburger-line"></span>
-      </a>
-    </div>
-
-    <div class="header-head" id="headerHead">
-      <ul class="nav-links" style="list-style-type: none;">
-        <li class="header-head-link"><a class="nav-link-item active" href="index.html">Home</a></li>
-        <li class="dropdown header-head-link">
-          <button class="dropbtn"><a class="nav-link-item" href="#section1">Competitions</a></button>
-          <div class="dropdown-content">
-            <a href="#">SUAS</a>
-            <a href="#">SAE INT.</a>
-            <a href="#">DDC REGULAR</a>
-            <a href="#">DDC MICRO</a>
-            <a href="#">IARC</a>
-            <a href="#">AEROTHON</a>
-          </div>
-        </li>
-        <li class="header-head-link"><a class="nav-link-item" href="#team-section">Team</a></li>
-        <li class="header-head-link"><a class="nav-link-item" href="#">Projects</a></li>
-        <li class="header-head-link"><a class="nav-link-item" href="#section3">Blogs</a></li>
-        <li class="header-head-link"><a class="nav-link-item" href="#">Timeline</a></li>
-        <li class="header-head-link"><a class="nav-link-item" href="#about-section">About Us</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- ===== SCROLL INDICATOR ===== -->
-  <div class="scroll-indicator" id="scrollIndicator">
-    <div class="arrow"></div>
-    <div class="arrow"></div>
-    <div class="arrow"></div>
-  </div>
-
-  <!-- ===== HERO VIDEO SECTION ===== -->
-  <section class="vid" id="heroSection">
-    <div class="scroll-container1">
-      <div class="scroll-text1" id="text11">TEAM VAYU</div>
-    </div>
-    <div class="scroll-container1">
-      <div class="scroll-text2" id="text12">Design. Build.<br>Fly.</div>
-    </div>
-
-    <div class="holder">
-      <!-- Replace with your video file -->
-      <video src="images/hero-video.mp4" id="vidd" muted loop playsinline autoplay
-             poster="images/hero-drone.jpg"></video>
-      <div class="overlay" id="overlay"></div>
-      <div id="logo">
-        <img src="images/vayu-logo.png" alt="Team Vayu Logo"
-             style="max-width: 440px; max-height: 220px; object-fit: contain; filter: drop-shadow(0 0 35px rgba(220,220,220,0.35));">
+      <!-- Action Button & Hamburger for Mobile -->
+      <div class="header-actions">
+        <a href="#contact" class="btn-hud-action">
+          <span class="pulse-dot"></span> SYS // COMM
+        </a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
       </div>
 
-      <!-- Mobile hero -->
-      <div class="mobile-vid">
-        <video src="images/hero-video.mp4" id="mobile-vidd" muted loop playsinline autoplay
-               poster="images/hero-drone.jpg"></video>
-        <div id="logo-mobile">
-          <img src="images/vayu-logo.png" alt="Team Vayu Logo"
-               style="max-width: 220px; max-height: 120px; object-fit: contain;">
-          <p class="hero-tagline-mobile">DESIGN | BUILD | FLY</p>
-        </div>
-      </div>
     </div>
-  </section>
+  </header>
 
-  <!-- ===== SECONDARY NAVBAR ===== -->
-  <nav class="navbar" id="secondaryNav">
-    <ul>
-      <li><span class="nav-drone-icon"><i class="fas fa-jet-fighter-up"></i></span></li>
-      <li><span class="nav-number">01</span><a href="#section1">Competitions</a></li>
-      <li><span class="nav-number">02</span><a href="#section2">Recent Events</a></li>
-      <li><span class="nav-number">03</span><a href="#section3">Blogs</a></li>
-      <li><span class="nav-number">04</span><a href="#gallery-section">Gallery</a></li>
-      <li><span class="nav-number">05</span><a href="#contact">Contact Us</a></li>
-      <li><span class="nav-drone-icon"><i class="fas fa-plane"></i></span></li>
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-header">
+      <span class="drawer-label">// NAVIGATION MATRIX</span>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Menu">&times;</button>
+    </div>
+    <ul class="drawer-nav-list">
+      <li><a href="#hero" class="drawer-link"><span class="nav-num">01</span> HOME</a></li>
+      <li><a href="#about" class="drawer-link"><span class="nav-num">02</span> ABOUT</a></li>
+      <li><a href="#projects" class="drawer-link"><span class="nav-num">03</span> PROJECTS</a></li>
+      <li><a href="#competitions" class="drawer-link"><span class="nav-num">04</span> COMPETITIONS</a></li>
+      <li><a href="#team" class="drawer-link"><span class="nav-num">05</span> TEAM</a></li>
+      <li><a href="#timeline" class="drawer-link"><span class="nav-num">06</span> TIMELINE</a></li>
+      <li><a href="#achievements" class="drawer-link"><span class="nav-num">07</span> ACHIEVEMENTS</a></li>
+      <li><a href="#blog" class="drawer-link"><span class="nav-num">08</span> BLOG</a></li>
+      <li><a href="#gallery" class="drawer-link"><span class="nav-num">09</span> GALLERY</a></li>
+      <li><a href="#contact" class="drawer-link"><span class="nav-num">10</span> CONTACT</a></li>
     </ul>
-  </nav>
-
-  <!-- ===== COMPETITIONS SECTION ===== -->
-  <h2 class="sec1head" id="section1">Competitions</h2>
-  <div class="separator1"></div>
-
-  <div class="container">
-    <!-- SUAS -->
-    <a href="#" class="premium-card fade-in-up">
-      <div class="content-box">
-        <h2>SUAS <span class="comp-badge">International</span></h2>
-        <p>
-          The Student Unmanned Aerial Systems (SUAS) competition fosters interest in UAS technologies,
-          challenging teams to design autonomous systems capable of executing complex missions including
-          surveillance, object detection, and payload delivery in real-world scenarios.
-        </p>
-        <span class="read-more-btn">Read More &rarr;</span>
+    <div class="drawer-footer">
+      <div class="drawer-hud-info">
+        <p>IEM KOLKATA // DEPT OF AEROSPACE & MECH</p>
+        <p>STATUS: FLIGHT READY [ONLINE]</p>
       </div>
-      <div class="image-box">
-        <img src="images/hero-drone.jpg" alt="SUAS Competition">
-      </div>
-    </a>
-
-    <!-- SAE International -->
-    <a href="#" class="premium-card fade-in-up">
-      <div class="content-box">
-        <h2>SAE International <span class="comp-badge">International</span></h2>
-        <p>
-          SAE Aero Design includes regional competitions that challenge participating teams to conceive, design,
-          fabricate, and test a radio controlled aircraft that can take off, land, and optimally meet the mission
-          requirements with maximum payload capacity.
-        </p>
-        <span class="read-more-btn">Read More &rarr;</span>
-      </div>
-      <div class="image-box">
-        <img src="images/competition-event.jpg" alt="SAE Aero Design">
-      </div>
-    </a>
-
-    <!-- IARC -->
-    <a href="#" class="premium-card fade-in-up">
-      <div class="content-box">
-        <h2>IARC <span class="comp-badge">International</span></h2>
-        <p>
-          The International Aerial Robotics Competition (IARC) is the world's longest-running collegiate challenge
-          that advances state-of-the-art aerial robotics by tasking students with solving "impossible" missions in
-          a collaborative, industry-recognized environment.
-        </p>
-        <span class="read-more-btn">Read More &rarr;</span>
-      </div>
-      <div class="image-box">
-        <img src="images/team-workshop.jpg" alt="IARC Competition">
-      </div>
-    </a>
-
-    <!-- Aerothon -->
-    <a href="#" class="premium-card fade-in-up">
-      <div class="content-box">
-        <h2>Aerothon <span class="comp-badge">National</span></h2>
-        <p>
-          Aerothon, organized by SAE India, is a national-level competition that challenges students
-          to design and innovate Unmanned Aerial Vehicles (UAVs) for solving real-world problems
-          through advanced aerodynamics and structural engineering.
-        </p>
-        <span class="read-more-btn">Read More &rarr;</span>
-      </div>
-      <div class="image-box">
-        <img src="images/competition-event.jpg" alt="Aerothon">
-      </div>
-    </a>
-
-    <!-- DDC Micro -->
-    <a href="#" class="premium-card fade-in-up">
-      <div class="content-box">
-        <h2>MICRO <span>DDC</span> <span class="comp-badge">National</span></h2>
-        <p>
-          In the Micro Class category of the SAE Drone Development Challenge (DDC), students design aircraft
-          that can carry heavy payloads while fitting within a 3-cubic-foot box, pushing the limits of compact
-          aerodynamic design.
-        </p>
-        <span class="read-more-btn">Read More &rarr;</span>
-      </div>
-      <div class="image-box">
-        <img src="images/drone-product.jpg" alt="Micro DDC">
-      </div>
-    </a>
-
-    <!-- DDC Regular -->
-    <a href="#" class="premium-card fade-in-up">
-      <div class="content-box">
-        <h2>REGULAR <span>DDC</span> <span class="comp-badge">National</span></h2>
-        <p>
-          The SAE DDC Regular Class challenges students to optimize aerodynamics
-          while carrying significant payloads within strict design constraints and weight limits,
-          testing complete aircraft engineering skills.
-        </p>
-        <span class="read-more-btn">Read More &rarr;</span>
-      </div>
-      <div class="image-box">
-        <img src="images/hero-drone.jpg" alt="Regular DDC">
-      </div>
-    </a>
-  </div>
-
-  <!-- ===== RECENT EVENTS — VIDEO SLIDESHOW ===== -->
-  <h2 id="section2" class="sec2-head fade-in-up">Recent Events</h2>
-  <div class="seperator"></div>
-
-  <div class="slidevideo">
-    <div class="slideshow-container" id="slideshow">
-      <div class="slide active-slide">
-        <!-- Replace with your event video -->
-        <img src="images/competition-event.jpg" alt="SUAS Event" class="slide-fallback-img">
-        <div class="overlay-text">
-          <h1><b>SUAS 2025</b></h1>
-          <p><a href="#">Learn More &gt;</a></p>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="images/hero-drone.jpg" alt="DDC Event" class="slide-fallback-img">
-        <div class="overlay-text">
-          <h1><b>DDC MICRO</b></h1>
-          <p><a href="#">Learn More &gt;</a></p>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="images/team-workshop.jpg" alt="Aerothon Event" class="slide-fallback-img">
-        <div class="overlay-text">
-          <h1><b>AEROTHON 2024</b></h1>
-          <p><a href="#">Learn More &gt;</a></p>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="images/drone-product.jpg" alt="SAE Aero Design" class="slide-fallback-img">
-        <div class="overlay-text">
-          <h1><b>SAE AERO DESIGN</b></h1>
-          <p><a href="#">Learn More &gt;</a></p>
-        </div>
-      </div>
-
-      <button class="slidebut prev" onclick="changeSlide(-1)">&#10094;</button>
-      <button class="slidebut next" onclick="changeSlide(1)">&#10095;</button>
-    </div>
-  </div>
-
-  <!-- ===== ACHIEVEMENTS CAROUSEL ===== -->
-  <h2 class="sec2-head fade-in-up">Achievements</h2>
-  <div class="seperator"></div>
-
-  <div class="carousel-wrapper">
-    <div class="carousel" id="awards-carousel">
-      <div class="carousel-item">
-        <img src="images/competition-event.jpg" alt="SUAS 2025">
-        <p><b>Internationally 1st</b> <br>(SUAS 2025)</p>
-      </div>
-      <div class="carousel-item">
-        <img src="images/hero-drone.jpg" alt="DDC Regular">
-        <p><b>Nationally 1st</b> <br>(DDC Regular 2025)</p>
-      </div>
-      <div class="carousel-item">
-        <img src="images/team-workshop.jpg" alt="DDC Micro">
-        <p><b>Nationally 3rd</b> <br>(DDC Micro 2025)</p>
-      </div>
-      <div class="carousel-item">
-        <img src="images/drone-product.jpg" alt="SAE Aero Design">
-        <p><b>Internationally 11th</b> <br>(SAE Aero Design 2025)</p>
-      </div>
-      <div class="carousel-item">
-        <img src="images/competition-event.jpg" alt="SUAS 2024">
-        <p><b>Internationally 3rd</b> <br>(SUAS 2024)</p>
-      </div>
-      <div class="carousel-item">
-        <img src="images/hero-drone.jpg" alt="Aerothon 2024">
-        <p><b>Nationally 1st</b> <br>(AeroThon 2024)</p>
-      </div>
-
-      <!-- Duplicates for seamless loop -->
-      <div class="carousel-item">
-        <img src="images/competition-event.jpg" alt="SUAS 2025">
-        <p><b>Internationally 1st</b> <br>(SUAS 2025)</p>
-      </div>
-      <div class="carousel-item">
-        <img src="images/hero-drone.jpg" alt="DDC Regular">
-        <p><b>Nationally 1st</b> <br>(DDC Regular 2025)</p>
-      </div>
-      <div class="carousel-item">
-        <img src="images/team-workshop.jpg" alt="DDC Micro">
-        <p><b>Nationally 3rd</b> <br>(DDC Micro 2025)</p>
-      </div>
-      <div class="carousel-item">
-        <img src="images/drone-product.jpg" alt="SAE Aero Design">
-        <p><b>Internationally 11th</b> <br>(SAE Aero Design 2025)</p>
-      </div>
-      <div class="carousel-item">
-        <img src="images/competition-event.jpg" alt="SUAS 2024">
-        <p><b>Internationally 3rd</b> <br>(SUAS 2024)</p>
-      </div>
-      <div class="carousel-item">
-        <img src="images/hero-drone.jpg" alt="Aerothon 2024">
-        <p><b>Nationally 1st</b> <br>(AeroThon 2024)</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="view-more-container" style="text-align: center; margin-top: 20px;">
-    <a href="#" class="view-more-button1">View More Achievements</a>
-  </div>
-
-  <!-- ===== BLOGS SECTION ===== -->
-  <div id="section3" class="blog section-block">
-    <h1 class="sec2-head fade-in-up">Blogs</h1>
-    <div class="seperator"></div>
-
-    <div class="blog-container">
-      <a class="bb" href="#">
-        <div class="card">
-          <div class="image">
-            <img src="images/team-workshop.jpg" alt="Blog Image">
-          </div>
-          <div class="content2">
-            <h3 class="highlight-text">Engineering The Anticipated</h3>
-            <span class="read-more">Read More</span>
-          </div>
-        </div>
-      </a>
-
-      <a class="bb" href="#">
-        <div class="card">
-          <div class="image">
-            <img src="images/competition-event.jpg" alt="Blog Image">
-          </div>
-          <div class="content2">
-            <h3 class="highlight-text">Team Vayu's SUAS 2025 Journey: From Hardships To Success</h3>
-            <span class="read-more">Read More</span>
-          </div>
-        </div>
-      </a>
-
-      <a class="bb" href="#">
-        <div class="card">
-          <div class="image">
-            <img src="images/hero-drone.jpg" alt="Blog Image">
-          </div>
-          <div class="content2">
-            <h3 class="highlight-text">The Comeback Of Champions</h3>
-            <span class="read-more">Read More</span>
-          </div>
-        </div>
+      <a href="https://www.instagram.com/teamvayu.iemk/" target="_blank" rel="noopener" class="drawer-social-btn">
+        <i class="fab fa-instagram"></i> @teamvayu.iemk
       </a>
     </div>
-
-    <h2 class="more-blogs"><a href="#">More Blogs &gt;</a></h2>
   </div>
 
-  <!-- ===== ABOUT US / TEAM SECTION ===== -->
-  <div class="about-section" id="about-section">
-    <h2 class="sec2-head fade-in-up">About Us</h2>
-    <div class="seperator"></div>
+  <main id="main-content">
 
-    <div class="about-content-grid">
-      <div class="about-text-block fade-in-up">
-        <p class="about-lead">We are <strong>Team Vayu</strong> — named after the Hindu deity of wind, embodying the spirit of flight and the relentless pursuit of aerial excellence.</p>
-        <p>Our multi-disciplinary team of engineering students spans aerodynamics, avionics, software engineering, and autonomous systems — all united by a single mission: to push the boundaries of what's possible in unmanned aerial vehicles.</p>
-        <p>From custom-built racing quadcopters to autonomous fixed-wing aircraft, we engineer solutions that compete on the world stage and inspire the next generation of aerospace innovators.</p>
-      </div>
-      <div class="about-image-block fade-in-up">
-        <img src="images/team-workshop.jpg" alt="Team Vayu Workshop">
-      </div>
-    </div>
+    <!-- =========================================================
+         HERO SECTION: AEROSPACE HEADQUARTERS
+         ========================================================= -->
+    <section class="hero-section" id="hero">
+      <!-- Interactive canvas for flight trajectory / particles -->
+      <canvas id="flightTrajectoryCanvas" class="hero-canvas" aria-hidden="true"></canvas>
 
-    <!-- Team Departments -->
-    <div class="team-grid" id="team-section">
-      <div class="team-dept-card fade-in-up">
-        <div class="dept-icon"><i class="fas fa-plane"></i></div>
-        <h3>Aerodynamics</h3>
-        <p>Airframe design, CFD simulation, and wind tunnel testing</p>
+      <!-- HUD Corner Elements -->
+      <div class="hud-corner hud-top-left" aria-hidden="true">
+        <span class="hud-tag">LAT: 22° 34' 12" N</span>
+        <span class="hud-tag">LON: 88° 26' 02" E</span>
+        <span class="hud-tag">ALT: 009M ASL</span>
       </div>
-      <div class="team-dept-card fade-in-up">
-        <div class="dept-icon"><i class="fas fa-microchip"></i></div>
-        <h3>Avionics</h3>
-        <p>Flight controllers, sensor fusion, PCB design & power systems</p>
+      <div class="hud-corner hud-top-right" aria-hidden="true">
+        <span class="hud-tag">SYS // FLIGHT OPS</span>
+        <span class="hud-tag status-active"><span class="status-indicator"></span> TELEMETRY ACTIVE</span>
       </div>
-      <div class="team-dept-card fade-in-up">
-        <div class="dept-icon"><i class="fas fa-robot"></i></div>
-        <h3>Software & AI</h3>
-        <p>ROS-based autonomy, computer vision, SLAM & ML systems</p>
-      </div>
-      <div class="team-dept-card fade-in-up">
-        <div class="dept-icon"><i class="fas fa-cogs"></i></div>
-        <h3>Structures</h3>
-        <p>Composites, 3D printing, CNC machining & structural analysis</p>
-      </div>
-      <div class="team-dept-card fade-in-up">
-        <div class="dept-icon"><i class="fas fa-satellite-dish"></i></div>
-        <h3>Ground Station</h3>
-        <p>Telemetry, real-time data, mission planning & comms</p>
-      </div>
-      <div class="team-dept-card fade-in-up">
-        <div class="dept-icon"><i class="fas fa-bullhorn"></i></div>
-        <h3>Operations</h3>
-        <p>Sponsorship, events, content creation & brand strategy</p>
-      </div>
-    </div>
-  </div>
 
-  <!-- ===== GALLERY SECTION ===== -->
-  <div class="gallery-section" id="gallery-section">
-    <h2 class="sec2-head fade-in-up">Gallery</h2>
-    <div class="seperator"></div>
+      <div class="container hero-content-wrapper">
+        <div class="hero-grid">
 
-    <div class="gallery-grid">
-      <div class="gallery-item gallery-large fade-in-up">
-        <img src="images/hero-drone.jpg" alt="Competition Day">
-        <div class="gallery-overlay"><span>Competition Day</span></div>
-      </div>
-      <div class="gallery-item fade-in-up">
-        <img src="images/team-workshop.jpg" alt="Workshop">
-        <div class="gallery-overlay"><span>Workshop Sessions</span></div>
-      </div>
-      <div class="gallery-item fade-in-up">
-        <img src="images/drone-product.jpg" alt="Our Build">
-        <div class="gallery-overlay"><span>Our Latest Build</span></div>
-      </div>
-      <div class="gallery-item gallery-wide fade-in-up">
-        <img src="images/competition-event.jpg" alt="Championship">
-        <div class="gallery-overlay"><span>National Championship</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== SPONSORS ===== -->
-  <div class="sponsors-container">
-    <h2 class="sponsors-title">Supporter</h2>
-    <div class="separator1"></div>
-
-    <a href="#" target="_blank" class="main-sponsor fade-in-up">
-      <img src="images/drone-product.jpg" alt="University Logo"
-           style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 2px solid #333;">
-      <h2>Your University</h2>
-      <p>Empowering innovation and research excellence.</p>
-    </a>
-  </div>
-
-  <!-- ===== CONTACT SECTION ===== -->
-  <div class="contact-container" id="contact">
-    <h1 class="contact-head">Connect with Us</h1>
-    <p class="contact-para">Thank you for contacting Team Vayu. We would love to hear from you and answer your queries. Let's contribute to the aerospace sector together.</p>
-
-    <div class="contact-box">
-      <div class="contact-left">
-        <h3>Send Your Request</h3>
-        <br>
-        <form id="contact-form">
-          <div class="input-row">
-            <div class="input-group">
-              <label for="company">Company Name</label>
-              <p></p>
-              <input type="text" id="company" name="company">
+          <!-- Left: Hero Text & Technical Identifiers -->
+          <div class="hero-text-col">
+            
+            <div class="hud-badge">
+              <span class="hud-bracket">[</span>
+              <span class="hud-badge-text">IEM • KOLKATA // AEROSPACE &amp; UAV ENGINEERING</span>
+              <span class="hud-bracket">]</span>
             </div>
-            <div class="input-group">
-              <label for="email">Email</label>
-              <p></p>
-              <input type="email" id="email" name="email" required>
+
+            <h1 class="hero-title">
+              TEAM <span class="text-cyan-glow">VAYU</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              ENGINEERING THE FUTURE OF FLIGHT
+            </p>
+
+            <p class="hero-description">
+              A student-led aerospace and UAV engineering team focused on designing, building and testing innovative aerial systems.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <span>EXPLORE OUR PROJECTS</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="#team" class="btn btn-outline">
+                <span>MEET THE TEAM</span>
+                <i class="fas fa-users"></i>
+              </a>
             </div>
+
+            <!-- Technical Telemetry Strip -->
+            <div class="hero-telemetry-strip">
+              <div class="telemetry-item">
+                <span class="telem-label">ORIGIN</span>
+                <span class="telem-val">IEM KOLKATA</span>
+              </div>
+              <div class="telemetry-separator">//</div>
+              <div class="telemetry-item">
+                <span class="telem-label">DISCIPLINE</span>
+                <span class="telem-val">AUTONOMOUS UAV / AERO</span>
+              </div>
+              <div class="telemetry-separator">//</div>
+              <div class="telemetry-item">
+                <span class="telem-label">SYS STATE</span>
+                <span class="telem-val text-cyan">NOMINAL [FLIGHT-READY]</span>
+              </div>
+            </div>
+
           </div>
-          <div class="input-row">
-            <div class="input-group">
-              <label for="fname">First Name</label>
-              <p></p>
-              <input type="text" id="fname" name="fname" required>
-            </div>
-            <div class="input-group">
-              <label for="lname">Last Name</label>
-              <p></p>
-              <input type="text" id="lname" name="lname" required>
+
+          <!-- Right: Blueprint Visual Reticle & UAV Image Placeholder -->
+          <div class="hero-visual-col">
+            <div class="blueprint-card">
+              <!-- Corner Crosshairs -->
+              <div class="crosshair ch-tl">+</div>
+              <div class="crosshair ch-tr">+</div>
+              <div class="crosshair ch-bl">+</div>
+              <div class="crosshair ch-br">+</div>
+
+              <!-- Reticle Header -->
+              <div class="blueprint-header">
+                <span class="bp-code">FIG. 01 // AIRFRAME SCHEMATIC [CONCEPT]</span>
+                <span class="bp-badge">SCALE: 1:1</span>
+              </div>
+
+              <!-- Aircraft Visualization Area -->
+              <div class="blueprint-visual-box">
+                <img src="images/hero-drone.jpg" alt="Team VAYU Aircraft Architecture" class="blueprint-img">
+                <div class="blueprint-grid-overlay" aria-hidden="true"></div>
+                
+                <!-- HUD Targeting Reticles -->
+                <div class="reticle-target reticle-nose" title="Pitot Static & Sensor Array">
+                  <span class="reticle-dot"></span>
+                  <span class="reticle-label">AVIONICS BAY</span>
+                </div>
+                <div class="reticle-target reticle-wing" title="Aerodynamic Wing Surface">
+                  <span class="reticle-dot"></span>
+                  <span class="reticle-label">AERO SURFACES</span>
+                </div>
+                <div class="reticle-target reticle-tail" title="Propulsion & Rudder">
+                  <span class="reticle-dot"></span>
+                  <span class="reticle-label">PROPULSION CORE</span>
+                </div>
+              </div>
+
+              <!-- Blueprint Footer Telemetry -->
+              <div class="blueprint-footer">
+                <div class="bp-stat"><span>CLASS:</span> UAV / UAS PROTOTYPE</div>
+                <div class="bp-stat"><span>AIRFOIL:</span> COMPUTATIONAL OPTIMIZED</div>
+                <div class="bp-stat"><span>LAB:</span> IEM FLIGHT LAB</div>
+              </div>
             </div>
           </div>
-          <div class="input-row">
-            <div class="input-group">
-              <label for="contact_phone">Contact No</label>
-              <p></p>
-              <input type="tel" id="contact_phone" name="contact" required>
+
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#about" class="hero-scroll-btn" aria-label="Scroll to Section 01 About">
+        <span class="scroll-text">EXPLORE LAB</span>
+        <div class="scroll-line">
+          <div class="scroll-dot"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- =========================================================
+         SECTION 01: ABOUT (WHO WE ARE)
+         ========================================================= -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="tag-num">// 01</span>
+            <span class="tag-name">WHO WE ARE</span>
+          </div>
+          <h2 class="section-title">THE AEROSPACE INITIATIVE</h2>
+        </div>
+
+        <div class="about-grid">
+          
+          <div class="about-content-col">
+            <p class="about-lead">
+              Founded at the <strong class="text-white">Institute of Engineering &amp; Management (IEM), Kolkata</strong>, Team VAYU is a multidisciplinary student engineering team dedicated to conceptualizing, engineering, and piloting high-performance unmanned aerial vehicles.
+            </p>
+            <p class="about-body">
+              Inspired by <em>Vayu</em> — the eternal element of wind and motion — we fuse computational fluid dynamics, embedded avionics, lightweight composite structures, and autonomous flight controls. From theoretical calculations on paper to wind tunnel analyses and full-scale airfield flight testing, our members apply rigorous engineering principles to conquer complex aerospace challenges.
+            </p>
+            <div class="about-actions">
+              <a href="#projects" class="btn btn-primary">
+                <span>READ OUR STORY</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn-text">
+                <span>DISCUSS COLLABORATION &rarr;</span>
+              </a>
             </div>
-            <div class="input-group">
-              <label for="country">Country</label>
-              <p></p>
-              <input type="text" id="country" name="country">
+          </div>
+
+          <!-- Highlight Statistics (Strictly Placeholders as requested: 00+) -->
+          <div class="stats-grid-col">
+            <div class="stat-card">
+              <div class="stat-corner-plus">+</div>
+              <div class="stat-number-wrapper">
+                <span class="stat-num counter" data-target="0">00</span><span class="stat-suffix">+</span>
+              </div>
+              <span class="stat-label">TEAM MEMBERS</span>
+              <p class="stat-desc">Multidisciplinary student engineers spanning aerodynamics, avionics, and structures.</p>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-corner-plus">+</div>
+              <div class="stat-number-wrapper">
+                <span class="stat-num counter" data-target="0">00</span><span class="stat-suffix">+</span>
+              </div>
+              <span class="stat-label">PROJECTS</span>
+              <p class="stat-desc">UAV platforms engineered from clean-sheet CAD designs to flight-tested prototypes.</p>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-corner-plus">+</div>
+              <div class="stat-number-wrapper">
+                <span class="stat-num counter" data-target="0">00</span><span class="stat-suffix">+</span>
+              </div>
+              <span class="stat-label">COMPETITIONS</span>
+              <p class="stat-desc">Targeted national and global aeronautical engineering arenas and design fly-offs.</p>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-corner-plus">+</div>
+              <div class="stat-number-wrapper">
+                <span class="stat-num counter" data-target="0">00</span><span class="stat-suffix">+</span>
+              </div>
+              <span class="stat-label">YEARS OF INNOVATION</span>
+              <p class="stat-desc">Continuous aerospace research, flight prototyping, and iterative development.</p>
             </div>
           </div>
-          <div>
-            <label for="query">Query</label>
-            <p></p>
-            <textarea id="query" name="query" rows="4" required></textarea>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 02: PROJECTS (FROM CONCEPT TO FLIGHT)
+         ========================================================= -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="tag-num">// 02</span>
+            <span class="tag-name">FROM CONCEPT TO FLIGHT</span>
           </div>
-          <p></p>
-          <p></p>
-          <button type="submit" class="submit-btn">Submit</button>
-        </form>
-      </div>
-
-      <div class="contact-right">
-        <h3>Get in Touch</h3>
-        <br>
-        <p>If you have any questions, feel free to contact us. We are here to help!</p>
-        <br>
-        <h4>Contact Information</h4>
-        <br>
-        <p><strong>Email:</strong> teamvayu@college.ac.in</p>
-        <br>
-        <p><strong>Email:</strong> teamvayu@gmail.com</p>
-        <br>
-        <br>
-        <p><strong>Address:</strong> Team Vayu, Your University, City, State. 000000</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== SPONSOR POPUP TRIGGER ===== -->
-  <div id="centerTrigger" class="center-sponsor-trigger">
-    <div class="trigger-content">
-      <i class="fas fa-handshake"></i>
-      <span>Sponsor Us?</span>
-    </div>
-    <div class="trigger-pulse"></div>
-  </div>
-
-  <!-- ===== SPONSOR POPUP OVERLAY ===== -->
-  <div id="sponsorOverlay" class="sponsor-overlay">
-    <div class="sponsor-popup">
-      <button id="sponsorClose" class="sponsor-close">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-
-      <div class="sponsor-branding">
-        <img src="images/vayu-logo.png" alt="Team Vayu Logo" class="sponsor-logo"
-             style="width: 90px; height: 90px; object-fit: contain; filter: drop-shadow(0 0 15px rgba(200,200,200,0.3));">
-        <h2 class="sponsor-title">Partner with <span>Team Vayu</span></h2>
-        <p class="sponsor-subtitle">Your University's Premier UAV Team</p>
-      </div>
-
-      <div class="sponsor-achievements">
-        <div class="achievement-badge">
-          <i class="fas fa-trophy badge-icon"></i>
-          <div class="badge-text">1st Place<span>SUAS 2025 (Global)</span></div>
+          <h2 class="section-title">ENGINEERED FLEET &amp; PLATFORMS</h2>
         </div>
-        <div class="achievement-badge">
-          <i class="fas fa-medal badge-icon"></i>
-          <div class="badge-text">National Champions<span>Aerothon & DDC</span></div>
-        </div>
-      </div>
 
-      <div class="benefits-title">Why Sponsor Us?</div>
-      <div class="benefits-grid">
-        <div class="benefit-item">
-          <i class="fas fa-globe benefit-icon"></i>
-          <div class="benefit-content">
-            <h4>Global Brand Visibility</h4>
-            <p>Logo on our drones & 50+ member jerseys.</p>
+        <!-- Category Filters -->
+        <div class="filter-bar" id="projectFilterBar">
+          <button class="filter-btn active" data-filter="all">ALL SYSTEMS [05]</button>
+          <button class="filter-btn" data-filter="fixed-wing">FIXED WING</button>
+          <button class="filter-btn" data-filter="multirotor">MULTIROTOR</button>
+          <button class="filter-btn" data-filter="vtol">VTOL</button>
+          <button class="filter-btn" data-filter="autonomous">AUTONOMOUS SYSTEMS</button>
+          <button class="filter-btn" data-filter="experimental">EXPERIMENTAL</button>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="projects-grid" id="projectsGrid">
+          
+          <!-- Project 01: Fixed Wing -->
+          <article class="project-card" data-category="fixed-wing">
+            <div class="card-corner-reticle"></div>
+            <div class="project-img-box">
+              <img src="images/hero-drone.jpg" alt="Project VAYU Alpha - Fixed Wing" class="project-img" loading="lazy">
+              <div class="project-badge">FIXED WING // 202X</div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="project-code">DESIGNATION // VAYU-FW-01</span>
+                <span class="project-year">YEAR: 202X [PLACEHOLDER]</span>
+              </div>
+              <h3 class="project-name">PROJECT VAYU ALPHA [PLACEHOLDER]</h3>
+              <p class="project-desc">
+                High-efficiency fixed-wing endurance platform designed for aerodynamic optimization, maximum payload capacity, and sustained autonomous waypoint navigation.
+              </p>
+              <div class="technical-highlights">
+                <span class="highlights-title">TECHNICAL HIGHLIGHTS:</span>
+                <ul class="highlights-list">
+                  <li><i class="fas fa-microchip"></i> Telemetry &amp; Flight Controller: [Placeholder Spec]</li>
+                  <li><i class="fas fa-wind"></i> Wing Airfoil &amp; Aspect Ratio: [Placeholder Spec]</li>
+                  <li><i class="fas fa-battery-bolt"></i> Propulsion &amp; Range Target: [Placeholder Spec]</li>
+                </ul>
+              </div>
+              <a href="#contact" class="btn-card-link">
+                <span>VIEW PROJECT SPEC</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 02: VTOL -->
+          <article class="project-card" data-category="vtol">
+            <div class="card-corner-reticle"></div>
+            <div class="project-img-box">
+              <img src="images/competition-event.jpg" alt="Project VAYU Hybrid - VTOL" class="project-img" loading="lazy">
+              <div class="project-badge">VTOL PLATFORM // 202X</div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="project-code">DESIGNATION // VAYU-VTOL-02</span>
+                <span class="project-year">YEAR: 202X [PLACEHOLDER]</span>
+              </div>
+              <h3 class="project-name">PROJECT VAYU HYBRID [PLACEHOLDER]</h3>
+              <p class="project-desc">
+                Transition-capable hybrid Vertical Take-Off and Landing aircraft combining runway-free multirotor departure with efficient long-range fixed-wing cruise.
+              </p>
+              <div class="technical-highlights">
+                <span class="highlights-title">TECHNICAL HIGHLIGHTS:</span>
+                <ul class="highlights-list">
+                  <li><i class="fas fa-microchip"></i> Transition Autopilot Algorithm: [Placeholder Spec]</li>
+                  <li><i class="fas fa-wind"></i> Aerodynamic Transition Lift: [Placeholder Spec]</li>
+                  <li><i class="fas fa-battery-bolt"></i> Dual-Power Architecture: [Placeholder Spec]</li>
+                </ul>
+              </div>
+              <a href="#contact" class="btn-card-link">
+                <span>VIEW PROJECT SPEC</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 03: Multirotor -->
+          <article class="project-card" data-category="multirotor">
+            <div class="card-corner-reticle"></div>
+            <div class="project-img-box">
+              <img src="images/drone-product.jpg" alt="Project VAYU Hex - Multirotor" class="project-img" loading="lazy">
+              <div class="project-badge">MULTIROTOR // 202X</div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="project-code">DESIGNATION // VAYU-MR-03</span>
+                <span class="project-year">YEAR: 202X [PLACEHOLDER]</span>
+              </div>
+              <h3 class="project-name">PROJECT VAYU HEXA [PLACEHOLDER]</h3>
+              <p class="project-desc">
+                Heavy-lift multirotor testbed engineered with redundant carbon-composite arms for precision hover, gimbaled payload integration, and localized sensor drops.
+              </p>
+              <div class="technical-highlights">
+                <span class="highlights-title">TECHNICAL HIGHLIGHTS:</span>
+                <ul class="highlights-list">
+                  <li><i class="fas fa-microchip"></i> Multi-Axis Sensor Stabilization: [Placeholder Spec]</li>
+                  <li><i class="fas fa-wind"></i> Hover Thrust-to-Weight Ratio: [Placeholder Spec]</li>
+                  <li><i class="fas fa-battery-bolt"></i> Modular Payload Quick-Release: [Placeholder Spec]</li>
+                </ul>
+              </div>
+              <a href="#contact" class="btn-card-link">
+                <span>VIEW PROJECT SPEC</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 04: Autonomous Systems -->
+          <article class="project-card" data-category="autonomous">
+            <div class="card-corner-reticle"></div>
+            <div class="project-img-box">
+              <img src="images/team-workshop.jpg" alt="Project VAYU Vision - Autonomous" class="project-img" loading="lazy">
+              <div class="project-badge">AUTONOMOUS // 202X</div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="project-code">DESIGNATION // VAYU-AUTO-04</span>
+                <span class="project-year">YEAR: 202X [PLACEHOLDER]</span>
+              </div>
+              <h3 class="project-name">PROJECT AERO-VISION [PLACEHOLDER]</h3>
+              <p class="project-desc">
+                Edge-AI compute payload featuring real-time visual odometry, automated obstacle evasion, target detection, and autonomous precision runway docking.
+              </p>
+              <div class="technical-highlights">
+                <span class="highlights-title">TECHNICAL HIGHLIGHTS:</span>
+                <ul class="highlights-list">
+                  <li><i class="fas fa-microchip"></i> Onboard Edge Computing Unit: [Placeholder Spec]</li>
+                  <li><i class="fas fa-wind"></i> Computer Vision Model Latency: [Placeholder Spec]</li>
+                  <li><i class="fas fa-battery-bolt"></i> Failsafe Geofence Execution: [Placeholder Spec]</li>
+                </ul>
+              </div>
+              <a href="#contact" class="btn-card-link">
+                <span>VIEW PROJECT SPEC</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 05: Experimental Systems -->
+          <article class="project-card" data-category="experimental">
+            <div class="card-corner-reticle"></div>
+            <div class="project-img-box">
+              <img src="images/hero-drone.jpg" alt="Project VAYU Lab - Experimental" class="project-img" loading="lazy">
+              <div class="project-badge">EXPERIMENTAL // 202X</div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="project-code">DESIGNATION // VAYU-EXP-05</span>
+                <span class="project-year">YEAR: 202X [PLACEHOLDER]</span>
+              </div>
+              <h3 class="project-name">EXPERIMENTAL TESTBED [PLACEHOLDER]</h3>
+              <p class="project-desc">
+                Rapid-prototyping aerodynamics test platform evaluating novel composite winglets, custom 3D-printed internal ribs, and active telemetry instrumentation.
+              </p>
+              <div class="technical-highlights">
+                <span class="highlights-title">TECHNICAL HIGHLIGHTS:</span>
+                <ul class="highlights-list">
+                  <li><i class="fas fa-microchip"></i> Strain &amp; Pressure Sensor Mesh: [Placeholder Spec]</li>
+                  <li><i class="fas fa-wind"></i> Computational CFD Correlation: [Placeholder Spec]</li>
+                  <li><i class="fas fa-battery-bolt"></i> Lightweight Honeycomb Core: [Placeholder Spec]</li>
+                </ul>
+              </div>
+              <a href="#contact" class="btn-card-link">
+                <span>VIEW PROJECT SPEC</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 03: COMPETITIONS (BUILT TO COMPETE)
+         ========================================================= -->
+    <section class="section competitions-section" id="competitions">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="tag-num">// 03</span>
+            <span class="tag-name">BUILT TO COMPETE</span>
           </div>
+          <h2 class="section-title">TARGET AEROSPACE ARENAS</h2>
+          <p class="section-subtitle">
+            [Placeholder Structure] Team VAYU engineers aerial systems designed to meet competitive aerospace design constraints, payload delivery specifications, and mission flight envelopes.
+          </p>
         </div>
-        <div class="benefit-item">
-          <i class="fas fa-users benefit-icon"></i>
-          <div class="benefit-content">
-            <h4>Access to Top Talent</h4>
-            <p>Recruit elite engineers directly.</p>
-          </div>
-        </div>
-        <div class="benefit-item">
-          <i class="fas fa-handshake benefit-icon"></i>
-          <div class="benefit-content">
-            <h4>R&D Collaboration</h4>
-            <p>Partner on cutting-edge drone tech.</p>
-          </div>
-        </div>
-        <div class="benefit-item">
-          <i class="fas fa-hashtag benefit-icon"></i>
-          <div class="benefit-content">
-            <h4>Social Media Reach</h4>
-            <p>Features across all our platforms.</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="sponsor-stats">
-        <div class="stat-item">
-          <div class="stat-number">15+</div>
-          <div class="stat-label">Awards</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">50+</div>
-          <div class="stat-label">Members</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">5+</div>
-          <div class="stat-label">Years</div>
-        </div>
-      </div>
+        <div class="competitions-grid">
+          
+          <!-- Competition Card 01 -->
+          <div class="comp-card">
+            <div class="comp-header">
+              <span class="comp-category">UAV COMPETITIONS // [PLACEHOLDER]</span>
+              <span class="comp-year">TARGET: 202X</span>
+            </div>
+            <h3 class="comp-title">SUAS COMPETITION ARENA [PLACEHOLDER]</h3>
+            <p class="comp-desc">
+              Autonomous search, waypoint navigation, target classification, and precise obstacle-avoiding delivery missions engineered within strict time bounds.
+            </p>
+            <div class="comp-specs">
+              <div class="comp-spec-row">
+                <span class="spec-k">DISCIPLINE:</span>
+                <span class="spec-v">Autonomous UAV &amp; Computer Vision</span>
+              </div>
+              <div class="comp-spec-row">
+                <span class="spec-k">MISSION OBJECTIVE:</span>
+                <span class="spec-v">Waypoint Flight &amp; Precision Drop</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn-comp-link">
+              <span>VIEW DETAILS &rarr;</span>
+            </a>
+          </div>
 
-      <div class="sponsor-cta">
-        <p class="cta-text">Join us in shaping the future of aerial robotics.</p>
-        <div class="cta-buttons">
-          <button id="popupSponsorBtn" class="cta-primary">
-            Become a Sponsor <i class="fas fa-arrow-right"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+          <!-- Competition Card 02 -->
+          <div class="comp-card">
+            <div class="comp-header">
+              <span class="comp-category">AERO DESIGN // [PLACEHOLDER]</span>
+              <span class="comp-year">TARGET: 202X</span>
+            </div>
+            <h3 class="comp-title">SAE AERO DESIGN CHALLENGE [PLACEHOLDER]</h3>
+            <p class="comp-desc">
+              Real-world aircraft design optimization emphasizing maximum structural payload fraction, short-field takeoff capabilities, and comprehensive engineering design reports.
+            </p>
+            <div class="comp-specs">
+              <div class="comp-spec-row">
+                <span class="spec-k">DISCIPLINE:</span>
+                <span class="spec-v">Aero Design &amp; Structural Sizing</span>
+              </div>
+              <div class="comp-spec-row">
+                <span class="spec-k">MISSION OBJECTIVE:</span>
+                <span class="spec-v">High-Payload Lift &amp; Clean Landing</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn-comp-link">
+              <span>VIEW DETAILS &rarr;</span>
+            </a>
+          </div>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="main-footer">
-    <div class="footer-container">
-      <!-- Brand Identity -->
-      <div class="footer-column brand-col">
-        <div class="footer-logo">
-          <a href="index.html" style="display: flex; align-items: center; gap: 14px; text-decoration: none; margin-bottom: 14px;">
-            <img src="images/vayu-logo.png" alt="Team Vayu Logo" style="height: 48px; width: auto; object-fit: contain;">
-            <span style="font-family: var(--font-brand); font-weight: 800; font-size: 1.25rem; letter-spacing: 3px; color: var(--white);">TEAM <span style="color: var(--silver-light);">VAYU</span></span>
+          <!-- Competition Card 03 -->
+          <div class="comp-card">
+            <div class="comp-header">
+              <span class="comp-category">DRONE CHALLENGES // [PLACEHOLDER]</span>
+              <span class="comp-year">TARGET: 202X</span>
+            </div>
+            <h3 class="comp-title">NATIONAL DRONE CHALLENGE [PLACEHOLDER]</h3>
+            <p class="comp-desc">
+              Inter-university collegiate drone competition evaluating agility, multi-target reconnaissance, rapid battery cycle management, and pilot manual overrides.
+            </p>
+            <div class="comp-specs">
+              <div class="comp-spec-row">
+                <span class="spec-k">DISCIPLINE:</span>
+                <span class="spec-v">Multirotor Agility &amp; Payload Transit</span>
+              </div>
+              <div class="comp-spec-row">
+                <span class="spec-k">MISSION OBJECTIVE:</span>
+                <span class="spec-v">Speed Course &amp; Delivery Zone</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn-comp-link">
+              <span>VIEW DETAILS &rarr;</span>
+            </a>
+          </div>
+
+          <!-- Competition Card 04 -->
+          <div class="comp-card">
+            <div class="comp-header">
+              <span class="comp-category">AUTONOMOUS FLIGHT // [PLACEHOLDER]</span>
+              <span class="comp-year">TARGET: 202X</span>
+            </div>
+            <h3 class="comp-title">AEROTHON &amp; AUTONOMY FLY-OFF [PLACEHOLDER]</h3>
+            <p class="comp-desc">
+              GPS-denied localization, autonomous search-and-rescue reconnaissance simulation, and multi-agent flight coordination challenges.
+            </p>
+            <div class="comp-specs">
+              <div class="comp-spec-row">
+                <span class="spec-k">DISCIPLINE:</span>
+                <span class="spec-v">GPS-Denied Flight &amp; Telemetry Relay</span>
+              </div>
+              <div class="comp-spec-row">
+                <span class="spec-k">MISSION OBJECTIVE:</span>
+                <span class="spec-v">Target Recovery &amp; Geo-Mapping</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn-comp-link">
+              <span>VIEW DETAILS &rarr;</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 04: TIMELINE (OUR JOURNEY)
+         ========================================================= -->
+    <section class="section timeline-section" id="timeline">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="tag-num">// 04</span>
+            <span class="tag-name">OUR JOURNEY</span>
+          </div>
+          <h2 class="section-title">THE ENGINEERING TIMELINE</h2>
+          <p class="section-subtitle">
+            [Placeholder Structure] Tracing the milestones from initial workshop assembly to competitive airfield trials.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-rail" aria-hidden="true"></div>
+
+          <!-- Milestone 1 -->
+          <div class="timeline-node">
+            <div class="timeline-marker">
+              <span class="node-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <span class="node-year">202X [PLACEHOLDER]</span>
+              <h3 class="node-title">TEAM FOUNDED</h3>
+              <p class="node-desc">
+                Inception of Team VAYU by passionate aerospace enthusiasts at IEM Kolkata, laying the technical foundation, safety procedures, and initial workshop lab.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="timeline-node">
+            <div class="timeline-marker">
+              <span class="node-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <span class="node-year">202X [PLACEHOLDER]</span>
+              <h3 class="node-title">FIRST PROTOTYPE</h3>
+              <p class="node-desc">
+                Completion and maiden test flight of the team's initial proof-of-concept airframe, validating stability derivatives and radio link telemetry range.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="timeline-node">
+            <div class="timeline-marker">
+              <span class="node-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <span class="node-year">202X [PLACEHOLDER]</span>
+              <h3 class="node-title">FIRST COMPETITION</h3>
+              <p class="node-desc">
+                Debut participation in a student aeronautics and unmanned vehicle challenge, completing design presentations and flight demonstrations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 4 -->
+          <div class="timeline-node">
+            <div class="timeline-marker">
+              <span class="node-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <span class="node-year">202X [PLACEHOLDER]</span>
+              <h3 class="node-title">NEW AIRCRAFT DEVELOPMENT</h3>
+              <p class="node-desc">
+                Introduction of advanced composite layup techniques, custom carbon spars, and enhanced autonomous waypoint autopilot hardware integration.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 5 -->
+          <div class="timeline-node">
+            <div class="timeline-marker">
+              <span class="node-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <span class="node-year">202X [PLACEHOLDER]</span>
+              <h3 class="node-title">MAJOR ACHIEVEMENT</h3>
+              <p class="node-desc">
+                Attaining recognized design evaluation rankings and establishing long-term multi-vehicle flight testing protocols at IEM Kolkata.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 05: ACHIEVEMENTS (MILESTONES)
+         ========================================================= -->
+    <section class="section achievements-section" id="achievements">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="tag-num">// 05</span>
+            <span class="tag-name">MILESTONES</span>
+          </div>
+          <h2 class="section-title">PERFORMANCE METRICS &amp; RECOGNITION</h2>
+          <p class="section-subtitle">
+            [Placeholder Structure] Standardized achievement tracking component ready to be updated with verified rankings, design awards, and flight milestones.
+          </p>
+        </div>
+
+        <div class="achievements-grid">
+          
+          <!-- Milestone Card 01 -->
+          <div class="milestone-card">
+            <div class="milestone-header">
+              <span class="milestone-index">01</span>
+              <span class="milestone-badge">COMPETITION // [PLACEHOLDER]</span>
+            </div>
+            <h3 class="milestone-title">NATIONAL COMPETITION RANKING</h3>
+            <p class="milestone-desc">
+              [Placeholder Data] Awarded for comprehensive flight score, payload handling, and structural robustness in collegiate aeronautics challenges.
+            </p>
+            <div class="milestone-footer">
+              <span class="mf-item">YEAR: 202X</span>
+              <span class="mf-sep">•</span>
+              <span class="mf-item">AIRFRAME: VAYU-ALPHA</span>
+            </div>
+          </div>
+
+          <!-- Milestone Card 02 -->
+          <div class="milestone-card">
+            <div class="milestone-header">
+              <span class="milestone-index">02</span>
+              <span class="milestone-badge">AERODYNAMICS // [PLACEHOLDER]</span>
+            </div>
+            <h3 class="milestone-title">DESIGN &amp; TECHNICAL EXCELLENCE</h3>
+            <p class="milestone-desc">
+              [Placeholder Data] Recognized for detailed design report calculations, CAD modeling fidelity, and computational fluid dynamics accuracy.
+            </p>
+            <div class="milestone-footer">
+              <span class="mf-item">YEAR: 202X</span>
+              <span class="mf-sep">•</span>
+              <span class="mf-item">EVALUATION: CAD &amp; CFD</span>
+            </div>
+          </div>
+
+          <!-- Milestone Card 03 -->
+          <div class="milestone-card">
+            <div class="milestone-header">
+              <span class="milestone-index">03</span>
+              <span class="milestone-badge">FLIGHT LOG // [PLACEHOLDER]</span>
+            </div>
+            <h3 class="milestone-title">FLIGHT TESTS &amp; LOGGED HOURS</h3>
+            <p class="milestone-desc">
+              [Placeholder Data] Accumulation of validated autonomous test flights and telemetry log hours without airframe structural failure.
+            </p>
+            <div class="milestone-footer">
+              <span class="mf-item">YEAR: 202X</span>
+              <span class="mf-sep">•</span>
+              <span class="mf-item">LOCATION: AIRFIELD TRIALS</span>
+            </div>
+          </div>
+
+          <!-- Milestone Card 04 -->
+          <div class="milestone-card">
+            <div class="milestone-header">
+              <span class="milestone-index">04</span>
+              <span class="milestone-badge">INNOVATION // [PLACEHOLDER]</span>
+            </div>
+            <h3 class="milestone-title">PROJECT MILESTONES ACHIEVED</h3>
+            <p class="milestone-desc">
+              [Placeholder Data] Demonstration of custom ground control telemetry link and localized target detection on edge compute systems.
+            </p>
+            <div class="milestone-footer">
+              <span class="mf-item">YEAR: 202X</span>
+              <span class="mf-sep">•</span>
+              <span class="mf-item">SYSTEM: AUTONOMOUS OPS</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 06: OUR TEAM (THE PEOPLE BEHIND THE FLIGHT)
+         ========================================================= -->
+    <section class="section team-section" id="team">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="tag-num">// 06</span>
+            <span class="tag-name">THE PEOPLE BEHIND THE FLIGHT</span>
+          </div>
+          <h2 class="section-title">SUBSYSTEM ENGINEERING DIVISIONS</h2>
+          <p class="section-subtitle">
+            [Placeholder Structure] Team VAYU is organized into specialized aerospace engineering divisions. Actual member rosters and leads will be populated in the next phase.
+          </p>
+        </div>
+
+        <!-- Subsystem Tabs -->
+        <div class="team-filter-bar" id="teamFilterBar">
+          <button class="team-pill active" data-subsystem="all">ALL DIVISIONS</button>
+          <button class="team-pill" data-subsystem="lead">LEADERSHIP</button>
+          <button class="team-pill" data-subsystem="aero">AERODYNAMICS</button>
+          <button class="team-pill" data-subsystem="avionics">AVIONICS</button>
+          <button class="team-pill" data-subsystem="propulsion">PROPULSION</button>
+          <button class="team-pill" data-subsystem="manufacturing">MANUFACTURING</button>
+          <button class="team-pill" data-subsystem="software">SOFTWARE &amp; CONTROLS</button>
+          <button class="team-pill" data-subsystem="rd">R&amp;D</button>
+        </div>
+
+        <!-- Team Cards Grid (Strict Placeholders - No fabricated identities) -->
+        <div class="team-grid" id="teamGrid">
+
+          <!-- Member 1: Leadership -->
+          <div class="team-card" data-subsystem="lead">
+            <div class="team-photo-box">
+              <div class="avatar-placeholder">
+                <i class="fas fa-user-astronaut"></i>
+                <span class="avatar-tag">LEADERSHIP</span>
+              </div>
+            </div>
+            <div class="team-info">
+              <span class="member-dept">TEAM LEADERSHIP</span>
+              <h3 class="member-name">[MEMBER NAME PLACEHOLDER]</h3>
+              <p class="member-role">Team Captain / Project Lead</p>
+              <div class="member-links">
+                <a href="https://www.instagram.com/teamvayu.iemk/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 2: Aerodynamics -->
+          <div class="team-card" data-subsystem="aero">
+            <div class="team-photo-box">
+              <div class="avatar-placeholder">
+                <i class="fas fa-wind"></i>
+                <span class="avatar-tag">AERO</span>
+              </div>
+            </div>
+            <div class="team-info">
+              <span class="member-dept">AERODYNAMICS &amp; CFD</span>
+              <h3 class="member-name">[MEMBER NAME PLACEHOLDER]</h3>
+              <p class="member-role">Aerodynamics Lead Engineer</p>
+              <div class="member-links">
+                <a href="https://www.instagram.com/teamvayu.iemk/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 3: Avionics -->
+          <div class="team-card" data-subsystem="avionics">
+            <div class="team-photo-box">
+              <div class="avatar-placeholder">
+                <i class="fas fa-microchip"></i>
+                <span class="avatar-tag">AVIONICS</span>
+              </div>
+            </div>
+            <div class="team-info">
+              <span class="member-dept">AVIONICS &amp; CIRCUITS</span>
+              <h3 class="member-name">[MEMBER NAME PLACEHOLDER]</h3>
+              <p class="member-role">Avionics Lead Engineer</p>
+              <div class="member-links">
+                <a href="https://www.instagram.com/teamvayu.iemk/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 4: Propulsion -->
+          <div class="team-card" data-subsystem="propulsion">
+            <div class="team-photo-box">
+              <div class="avatar-placeholder">
+                <i class="fas fa-fan"></i>
+                <span class="avatar-tag">PROPULSION</span>
+              </div>
+            </div>
+            <div class="team-info">
+              <span class="member-dept">PROPULSION &amp; POWER</span>
+              <h3 class="member-name">[MEMBER NAME PLACEHOLDER]</h3>
+              <p class="member-role">Propulsion Systems Engineer</p>
+              <div class="member-links">
+                <a href="https://www.instagram.com/teamvayu.iemk/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 5: Manufacturing -->
+          <div class="team-card" data-subsystem="manufacturing">
+            <div class="team-photo-box">
+              <div class="avatar-placeholder">
+                <i class="fas fa-tools"></i>
+                <span class="avatar-tag">MANUFACTURING</span>
+              </div>
+            </div>
+            <div class="team-info">
+              <span class="member-dept">MANUFACTURING &amp; COMPOSITES</span>
+              <h3 class="member-name">[MEMBER NAME PLACEHOLDER]</h3>
+              <p class="member-role">Structures &amp; Fab Lead</p>
+              <div class="member-links">
+                <a href="https://www.instagram.com/teamvayu.iemk/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 6: Software -->
+          <div class="team-card" data-subsystem="software">
+            <div class="team-photo-box">
+              <div class="avatar-placeholder">
+                <i class="fas fa-code"></i>
+                <span class="avatar-tag">SOFTWARE</span>
+              </div>
+            </div>
+            <div class="team-info">
+              <span class="member-dept">SOFTWARE &amp; AUTONOMY</span>
+              <h3 class="member-name">[MEMBER NAME PLACEHOLDER]</h3>
+              <p class="member-role">Autopilot &amp; GCS Developer</p>
+              <div class="member-links">
+                <a href="https://www.instagram.com/teamvayu.iemk/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="join-team-banner">
+          <div class="banner-text">
+            <h4>WANT TO ENGINEER AIRCRAFT WITH TEAM VAYU?</h4>
+            <p>We recruit passionate IEM Kolkata students across engineering disciplines every academic year.</p>
+          </div>
+          <a href="#contact" class="btn btn-outline">
+            <span>RECRUITMENT INQUIRIES &rarr;</span>
           </a>
-          <p class="brand-tagline">DESIGN | BUILD | FLY</p>
-          <div class="footer-social-grid">
-            <a href="#" target="_blank" class="social-link-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" target="_blank" class="social-link-icon"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" target="_blank" class="social-link-icon"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank" class="social-link-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 07: BLOG / JOURNAL (VAYU JOURNAL)
+         ========================================================= -->
+    <section class="section blog-section" id="blog">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="tag-num">// 07</span>
+            <span class="tag-name">VAYU JOURNAL</span>
           </div>
+          <h2 class="section-title">TECHNICAL LOGS &amp; INSIGHTS</h2>
+          <p class="section-subtitle">
+            [Placeholder Structure] Deep dives into aerodynamic calculations, avionics wiring, computational CFD studies, and field flight testing.
+          </p>
+        </div>
+
+        <div class="blog-grid">
+          
+          <!-- Post 1: Aerodynamics -->
+          <article class="blog-card">
+            <div class="blog-img-box">
+              <img src="images/hero-drone.jpg" alt="Aerodynamic Optimization Blog" class="blog-img" loading="lazy">
+              <span class="blog-category">AERODYNAMICS</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-date">DATE: [PLACEHOLDER] // 202X</div>
+              <h3 class="blog-title">AIRFOIL SELECTION &amp; COMPUTATIONAL CFD AT LOW REYNOLDS NUMBERS</h3>
+              <p class="blog-snippet">
+                Analyzing laminar separation bubbles and evaluating low-drag reflex airfoils to maximize endurance on our custom fixed-wing UAV platform.
+              </p>
+              <a href="#contact" class="blog-read-link">
+                <span>READ TECHNICAL LOG &rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Post 2: Avionics -->
+          <article class="blog-card">
+            <div class="blog-img-box">
+              <img src="images/drone-product.jpg" alt="Avionics Telemetry Architecture Blog" class="blog-img" loading="lazy">
+              <span class="blog-category">AVIONICS</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-date">DATE: [PLACEHOLDER] // 202X</div>
+              <h3 class="blog-title">REDUNDANT TELEMETRY LINKS &amp; EXTENDED-RANGE COMM BUS ARCHITECTURE</h3>
+              <p class="blog-snippet">
+                Implementing dual-band 915MHz and 2.4GHz transceivers to guarantee failsafe return-to-launch triggering during beyond-line-of-sight flight routines.
+              </p>
+              <a href="#contact" class="blog-read-link">
+                <span>READ TECHNICAL LOG &rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Post 3: Flight Testing -->
+          <article class="blog-card">
+            <div class="blog-img-box">
+              <img src="images/team-workshop.jpg" alt="Flight Testing Procedures Blog" class="blog-img" loading="lazy">
+              <span class="blog-category">FLIGHT TESTING</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-date">DATE: [PLACEHOLDER] // 202X</div>
+              <h3 class="blog-title">PRE-FLIGHT CHECKLIST AUTOMATION &amp; FIELD TEST DATA REDUCTION</h3>
+              <p class="blog-snippet">
+                Standardizing safety procedures, accelerometer calibration protocols, and real-time flight log analysis using Python and Mavlink.
+              </p>
+              <a href="#contact" class="blog-read-link">
+                <span>READ TECHNICAL LOG &rarr;</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 08: GALLERY (CAPTURED IN FLIGHT)
+         ========================================================= -->
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="tag-num">// 08</span>
+            <span class="tag-name">CAPTURED IN FLIGHT</span>
+          </div>
+          <h2 class="section-title">AEROSPACE ARCHIVES &amp; LAB TESTING</h2>
+          <p class="section-subtitle">
+            [Placeholder Structure] Visual documentation across aircraft prototypes, workshop fabrication, CAD assemblies, and flight trials. Click any image to launch full-resolution inspection.
+          </p>
+        </div>
+
+        <!-- Masonry / Responsive Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+          
+          <div class="gallery-item" data-src="images/hero-drone.jpg" data-caption="Fixed-Wing UAV Flight Testing Protocol [Placeholder]">
+            <img src="images/hero-drone.jpg" alt="Fixed Wing UAV Flight" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gal-cat">FLIGHT TRIALS</span>
+                <span class="gal-title">Fixed-Wing Maiden Flight</span>
+              </div>
+              <i class="fas fa-expand gallery-icon"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-src="images/team-workshop.jpg" data-caption="Workshop Fabrication &amp; Carbon Spar Layup [Placeholder]">
+            <img src="images/team-workshop.jpg" alt="Workshop Assembly" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gal-cat">FABRICATION</span>
+                <span class="gal-title">Composite Wing Assembly</span>
+              </div>
+              <i class="fas fa-expand gallery-icon"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-src="images/drone-product.jpg" data-caption="Avionics Integration &amp; Sensor Calibration [Placeholder]">
+            <img src="images/drone-product.jpg" alt="Avionics Integration" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gal-cat">AVIONICS</span>
+                <span class="gal-title">Autopilot &amp; GPS Bench Testing</span>
+              </div>
+              <i class="fas fa-expand gallery-icon"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-src="images/competition-event.jpg" data-caption="Competition Airfield Ground Station Setup [Placeholder]">
+            <img src="images/competition-event.jpg" alt="Competition Airfield Setup" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gal-cat">COMPETITIONS</span>
+                <span class="gal-title">Airfield Ground Control</span>
+              </div>
+              <i class="fas fa-expand gallery-icon"></i>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Lightbox Modal Component -->
+    <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+      <div class="lightbox-container">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+        <img src="" alt="Enlarged View" class="lightbox-img" id="lightboxImg">
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         SECTION 09: SOCIAL / INSTAGRAM (FOLLOW THE JOURNEY)
+         ========================================================= -->
+    <section class="section social-section" id="social">
+      <div class="container">
+
+        <div class="social-wrapper">
+          <div class="section-tag">
+            <span class="tag-num">// 09</span>
+            <span class="tag-name">FOLLOW THE JOURNEY</span>
+          </div>
+
+          <h2 class="social-title">DISPATCHES FROM THE FLIGHT LAB</h2>
+
+          <div class="instagram-handle-box">
+            <i class="fab fa-instagram instagram-icon-large"></i>
+            <span class="handle-text">@teamvayu.iemk</span>
+          </div>
+
+          <p class="social-subtext">
+            Follow our flight testing schedules, workshop build updates, aerodynamic CFD renders, and behind-the-scenes engineering logs directly on Instagram.
+          </p>
+
+          <a href="https://www.instagram.com/teamvayu.iemk/" target="_blank" rel="noopener" class="btn btn-primary btn-insta">
+            <i class="fab fa-instagram"></i>
+            <span>FOLLOW TEAM VAYU &rarr;</span>
+          </a>
+
+          <!-- Interactive Instagram Feed Placeholder Cards -->
+          <div class="insta-placeholder-grid">
+            <div class="insta-slot">
+              <img src="images/hero-drone.jpg" alt="Flight testing post" loading="lazy">
+              <div class="insta-slot-overlay"><i class="fab fa-instagram"></i></div>
+            </div>
+            <div class="insta-slot">
+              <img src="images/team-workshop.jpg" alt="Workshop build post" loading="lazy">
+              <div class="insta-slot-overlay"><i class="fab fa-instagram"></i></div>
+            </div>
+            <div class="insta-slot">
+              <img src="images/drone-product.jpg" alt="Avionics update post" loading="lazy">
+              <div class="insta-slot-overlay"><i class="fab fa-instagram"></i></div>
+            </div>
+            <div class="insta-slot">
+              <img src="images/competition-event.jpg" alt="Team photo post" loading="lazy">
+              <div class="insta-slot-overlay"><i class="fab fa-instagram"></i></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 10: CONTACT (LET'S BUILD WHAT FLIES NEXT)
+         ========================================================= -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="tag-num">// 10</span>
+            <span class="tag-name">LET'S BUILD WHAT FLIES NEXT</span>
+          </div>
+          <h2 class="section-title">COMMUNICATION MATRIX &amp; PARTNERSHIPS</h2>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Channels & Institution -->
+          <div class="contact-info-col">
+            
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-university"></i></div>
+              <div class="info-details">
+                <span class="info-title">INSTITUTION</span>
+                <p class="info-val">Institute of Engineering &amp; Management (IEM), Kolkata</p>
+                <p class="info-sub">Department of Aerospace &amp; Mechanical Engineering</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-location-dot"></i></div>
+              <div class="info-details">
+                <span class="info-title">FLIGHT LAB LOCATION</span>
+                <p class="info-val">Sector V, Salt Lake City, Kolkata, West Bengal 700091</p>
+                <p class="info-sub">COORDINATES: 22° 34' 12" N, 88° 26' 02" E</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-envelope"></i></div>
+              <div class="info-details">
+                <span class="info-title">ELECTRONIC TRANSMISSION</span>
+                <p class="info-val"><a href="mailto:contact@teamvayu.in">contact@teamvayu.in [PLACEHOLDER]</a></p>
+                <p class="info-sub">teamvayu.iemk@gmail.com [PLACEHOLDER]</p>
+              </div>
+            </div>
+
+            <!-- Sponsorship Callout Card -->
+            <div class="sponsor-prompt-card">
+              <div class="prompt-header">
+                <i class="fas fa-handshake-angle text-cyan"></i>
+                <span class="prompt-title">SPONSOR &amp; INDUSTRY PARTNERSHIP</span>
+              </div>
+              <p class="prompt-desc">
+                Partner with Team VAYU to empower student aerospace research, support advanced composite prototyping, and showcase your technology at competitive aeronautical venues.
+              </p>
+              <button class="btn btn-outline btn-sm" id="sponsorModalTrigger">
+                <span>SPONSOR / PARTNER WITH US &rarr;</span>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Contact Form Component -->
+          <div class="contact-form-col">
+            <form class="vayu-contact-form" id="contactForm" novalidate>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactName" class="form-label">CALLSIGN / FULL NAME *</label>
+                  <input type="text" id="contactName" name="name" class="form-input" placeholder="e.g. Dr. Alex Mercer" required>
+                  <span class="form-error" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                  <label for="contactEmail" class="form-label">EMAIL ADDRESS *</label>
+                  <input type="email" id="contactEmail" name="email" class="form-input" placeholder="e.g. alex@aerospace.org" required>
+                  <span class="form-error" id="emailError"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject" class="form-label">TRANSMISSION SUBJECT *</label>
+                <input type="text" id="contactSubject" name="subject" class="form-input" placeholder="Sponsorship / Collaboration / General Inquiry" required>
+                <span class="form-error" id="subjectError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label">TRANSMISSION MESSAGE *</label>
+                <textarea id="contactMessage" name="message" rows="5" class="form-input" placeholder="Provide details regarding your inquiry, technical interest, or partnership proposal..." required></textarea>
+                <span class="form-error" id="messageError"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                <span>SEND MESSAGE</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+
+              <div class="form-feedback" id="formFeedback" role="alert" aria-live="polite"></div>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       SPONSORSHIP INQUIRY MODAL
+       ========================================================= -->
+  <div class="sponsor-modal" id="sponsorModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="sponsor-backdrop" id="sponsorBackdrop"></div>
+    <div class="sponsor-dialog">
+      <button class="sponsor-close" id="sponsorClose" aria-label="Close modal">&times;</button>
+      
+      <div class="sponsor-dialog-header">
+        <span class="hud-tag">PARTNERSHIP INITIATIVE</span>
+        <h3 class="sponsor-dialog-title">COLLABORATE WITH TEAM VAYU</h3>
+        <p class="sponsor-dialog-sub">Institute of Engineering &amp; Management (IEM), Kolkata</p>
+      </div>
+
+      <div class="sponsor-dialog-body">
+        <p>
+          We invite technology providers, aerospace enterprises, alumni, and industry sponsors to support Team VAYU's flight operations and experimental UAV builds.
+        </p>
+        <div class="sponsor-tier-list">
+          <div class="tier-item">
+            <span class="tier-badge">MATERIALS &amp; HARDWARE</span>
+            <p>Carbon-fiber composites, brushless motors, flight computers, telemetry transceivers.</p>
+          </div>
+          <div class="tier-item">
+            <span class="tier-badge">SOFTWARE &amp; COMPUTATION</span>
+            <p>CFD simulation licenses, cloud telemetry infrastructure, autonomous navigation models.</p>
+          </div>
+          <div class="tier-item">
+            <span class="tier-badge">COMPETITION LOGISTICS</span>
+            <p>Field travel, transport crates, registration sponsorships for national fly-offs.</p>
+          </div>
+        </div>
+
+        <div class="sponsor-dialog-action">
+          <a href="mailto:contact@teamvayu.in?subject=Team%20VAYU%20Sponsorship%20Inquiry" class="btn btn-primary">
+            <i class="fas fa-envelope"></i>
+            <span>TRANSMIT PROPOSAL EMAIL</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="vayu-footer">
+    <div class="container footer-container">
+      
+      <!-- Brand & Coordinates -->
+      <div class="footer-brand-col">
+        <div class="footer-logo-row">
+          <img src="images/vayu-logo.png" alt="Team VAYU" class="footer-logo-img">
+          <div class="footer-brand-title">
+            <span class="f-title">TEAM <span class="text-cyan">VAYU</span></span>
+            <span class="f-sub">IEM • KOLKATA</span>
+          </div>
+        </div>
+        <p class="footer-tagline">
+          Designing, building, testing, and flying high-performance autonomous aerial platforms.
+        </p>
+        <div class="footer-telemetry">
+          <span>LAT: 22° 34' N // LON: 88° 26' E</span>
+          <span>ELEVATION: 9M ASL // SECTOR V</span>
         </div>
       </div>
 
-      <!-- Quick Links -->
-      <div class="footer-column">
-        <h4 class="footer-heading">QUICK LINKS</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#about-section">About Us</a></li>
-          <li><a href="#">Timeline</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#team-section">Our Team</a></li>
+      <!-- Quick Navigation Matrix -->
+      <div class="footer-nav-col">
+        <span class="footer-col-title">// SYSTEM INDEX</span>
+        <ul class="footer-links-grid">
+          <li><a href="#hero">01 HOME</a></li>
+          <li><a href="#about">02 ABOUT</a></li>
+          <li><a href="#projects">03 PROJECTS</a></li>
+          <li><a href="#competitions">04 COMPETITIONS</a></li>
+          <li><a href="#team">05 TEAM</a></li>
+          <li><a href="#timeline">06 TIMELINE</a></li>
+          <li><a href="#achievements">07 ACHIEVEMENTS</a></li>
+          <li><a href="#blog">08 BLOG</a></li>
+          <li><a href="#gallery">09 GALLERY</a></li>
+          <li><a href="#contact">10 CONTACT</a></li>
         </ul>
       </div>
 
-      <!-- Visit Us -->
-      <div class="footer-column">
-        <h4 class="footer-heading">VISIT US</h4>
-        <div class="footer-address-content">
-          <p>Team Vayu</p>
-          <p>Your University Campus</p>
-          <p>City, State — 000000</p>
-          <a href="#" target="_blank" class="map-link">
-            <i class="fas fa-location-dot" style="color: #c0c0c0;"></i> View on Maps
+      <!-- Social & Connect -->
+      <div class="footer-social-col">
+        <span class="footer-col-title">// TRANSMISSION CHANNELS</span>
+        <div class="footer-social-list">
+          <a href="https://www.instagram.com/teamvayu.iemk/" target="_blank" rel="noopener" class="footer-social-link">
+            <i class="fab fa-instagram"></i>
+            <span>@teamvayu.iemk</span>
+          </a>
+          <a href="#" class="footer-social-link">
+            <i class="fab fa-linkedin-in"></i>
+            <span>LinkedIn [Placeholder]</span>
+          </a>
+          <a href="#" class="footer-social-link">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube [Placeholder]</span>
           </a>
         </div>
-      </div>
 
-      <!-- Connect -->
-      <div class="footer-column contact-col">
-        <h4 class="footer-heading">CONNECT WITH US</h4>
-        <div class="footer-contact-details">
-          <p><i class="fas fa-envelope" style="color: #c0c0c0;"></i> <a href="mailto:teamvayu@college.ac.in">teamvayu@college.ac.in</a></p>
-          <p><i class="fas fa-phone" style="color: #c0c0c0;"></i> <a href="tel:+919876543210">+91 98765 43210</a></p>
+        <div class="footer-institution">
+          <p class="inst-label">ACADEMIC INSTITUTION</p>
+          <p class="inst-name">Institute of Engineering &amp; Management (IEM)</p>
+          <p class="inst-sub">Kolkata, West Bengal, India</p>
         </div>
       </div>
+
     </div>
 
+    <!-- Bottom Copyright Strip -->
     <div class="footer-bottom-strip">
-      <div class="container footer-bottom-flex">
-        <p>Copyright &copy; 2026 TEAM VAYU. All rights reserved.</p>
-        <div class="footer-actions">
-          <a href="#" class="footer-sponsor-btn"><i class="fas fa-heart"></i> SPONSOR US</a>
-          <a href="javascript:void(0);" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="footer-top-btn">Top &uarr;</a>
-        </div>
+      <div class="container footer-strip-flex">
+        <p>&copy; 2026 Team VAYU. All Rights Reserved. Engineered by Team VAYU // IEM Kolkata.</p>
+        <a href="#hero" class="back-to-top" aria-label="Return to top of page">
+          <span>ASCEND</span>
+          <i class="fas fa-chevron-up"></i>
+        </a>
       </div>
     </div>
   </footer>
 
+  <!-- Core JavaScript -->
   <script src="script.js"></script>
+
 </body>
 </html>
