@@ -291,10 +291,10 @@
             <div class="stat-card">
               <div class="stat-corner-plus">+</div>
               <div class="stat-number-wrapper">
-                <span class="stat-num counter" data-target="0">00</span><span class="stat-suffix">+</span>
+                <span class="stat-num counter" data-target="19">19</span><span class="stat-suffix">+</span>
               </div>
               <span class="stat-label">TEAM MEMBERS</span>
-              <p class="stat-desc">Multidisciplinary student engineers spanning aerodynamics, avionics, and structures.</p>
+              <p class="stat-desc">Multidisciplinary student engineers spanning aerospace hardware, avionics, autonomy, and operations.</p>
             </div>
 
             <div class="stat-card">
@@ -831,6 +831,9 @@
     <!-- =========================================================
          SECTION 06: OUR TEAM (THE PEOPLE BEHIND THE FLIGHT)
          ========================================================= -->
+    <!-- =========================================================
+         SECTION 06: OUR TEAM (THE PEOPLE BEHIND THE FLIGHT)
+         ========================================================= -->
     <section class="section team-section" id="team">
       <div class="container">
 
@@ -839,137 +842,362 @@
             <span class="tag-num">// 06</span>
             <span class="tag-name">THE PEOPLE BEHIND THE FLIGHT</span>
           </div>
-          <h2 class="section-title">SUBSYSTEM ENGINEERING DIVISIONS</h2>
+          <h2 class="section-title">TEAM VAYU FLIGHT ROSTER</h2>
           <p class="section-subtitle">
-            [Placeholder Structure] Team VAYU is organized into specialized aerospace engineering divisions. Actual member rosters and leads will be populated in the next phase.
+            Multidisciplinary student engineers from IEM Kolkata pushing the boundaries of autonomous aerial systems, composite fabrication, and flight dynamics.
           </p>
+        </div>
+
+        <!-- Tier 1: Command Cadre (Executive Leadership) -->
+        <div class="leadership-command-header">
+          <span class="sub-header-tag">// COMMAND CADRE</span>
+          <h3 class="sub-header-title">EXECUTIVE LEADERSHIP</h3>
+        </div>
+
+        <div class="core-leadership-grid">
+          
+          <!-- Team Captain: Iman -->
+          <div class="lead-hero-card captain-card" data-subsystem="lead">
+            <div class="lead-badge-top">
+              <span class="badge-role-cap"><i class="fas fa-crown"></i> COMMAND</span>
+              <span class="badge-callsign">VAYU-01</span>
+            </div>
+            <div class="lead-card-body">
+              <div class="lead-avatar-box">
+                <i class="fas fa-user-astronaut lead-avatar-icon"></i>
+              </div>
+              <div class="lead-meta">
+                <span class="lead-designation">TEAM CAPTAIN &amp; CAD LEAD</span>
+                <h3 class="lead-name">Iman</h3>
+                <p class="lead-sub">Executive Direction • Airframe CAD Architecture • Flight Program Oversight</p>
+                <div class="lead-socials">
+                  <a href="https://www.instagram.com/teamvayu.iemk/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                  <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Software Lead: Swarnavo -->
+          <div class="lead-hero-card" data-subsystem="lead">
+            <div class="lead-badge-top">
+              <span class="badge-role-lead"><i class="fas fa-terminal"></i> SOFTWARE</span>
+              <span class="badge-callsign">VAYU-02</span>
+            </div>
+            <div class="lead-card-body">
+              <div class="lead-avatar-box">
+                <i class="fas fa-code lead-avatar-icon"></i>
+              </div>
+              <div class="lead-meta">
+                <span class="lead-designation">SOFTWARE LEAD</span>
+                <h3 class="lead-name">Swarnavo</h3>
+                <p class="lead-sub">Autopilot Firmware • Computer Vision Pipeline • Ground Control Stations</p>
+                <div class="lead-socials">
+                  <a href="https://www.instagram.com/teamvayu.iemk/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                  <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hardware Lead: Arkadeep -->
+          <div class="lead-hero-card" data-subsystem="lead">
+            <div class="lead-badge-top">
+              <span class="badge-role-lead"><i class="fas fa-microchip"></i> HARDWARE</span>
+              <span class="badge-callsign">VAYU-03</span>
+            </div>
+            <div class="lead-card-body">
+              <div class="lead-avatar-box">
+                <i class="fas fa-bolt lead-avatar-icon"></i>
+              </div>
+              <div class="lead-meta">
+                <span class="lead-designation">HARDWARE &amp; PROPULSION LEAD</span>
+                <h3 class="lead-name">Arkadeep</h3>
+                <p class="lead-sub">Embedded Avionics • Power Distribution • Motor Thrust Bench Characterization</p>
+                <div class="lead-socials">
+                  <a href="https://www.instagram.com/teamvayu.iemk/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                  <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tier 2: Specialized Subsystem Divisions Matrix -->
+        <div class="leadership-command-header" style="margin-top: 3.5rem;">
+          <span class="sub-header-tag">// TECHNICAL MATRIX</span>
+          <h3 class="sub-header-title">SUBSYSTEM DIVISIONS &amp; CREWS</h3>
         </div>
 
         <!-- Subsystem Tabs -->
         <div class="team-filter-bar" id="teamFilterBar">
-          <button class="team-pill active" data-subsystem="all">ALL DIVISIONS</button>
-          <button class="team-pill" data-subsystem="lead">LEADERSHIP</button>
-          <button class="team-pill" data-subsystem="aero">AERODYNAMICS</button>
-          <button class="team-pill" data-subsystem="avionics">AVIONICS</button>
-          <button class="team-pill" data-subsystem="propulsion">PROPULSION</button>
+          <button class="team-pill active" data-subsystem="all">ALL DIVISIONS [10]</button>
+          <button class="team-pill" data-subsystem="software-cv">COMPUTER VISION</button>
+          <button class="team-pill" data-subsystem="simulation">SIMULATION</button>
+          <button class="team-pill" data-subsystem="avionics">AIRFRAME &amp; AVIONICS</button>
           <button class="team-pill" data-subsystem="manufacturing">MANUFACTURING</button>
-          <button class="team-pill" data-subsystem="software">SOFTWARE &amp; CONTROLS</button>
-          <button class="team-pill" data-subsystem="rd">R&amp;D</button>
+          <button class="team-pill" data-subsystem="propulsion">PROPULSION</button>
+          <button class="team-pill" data-subsystem="payload">PAYLOAD DELIVERY</button>
+          <button class="team-pill" data-subsystem="cad">CAD MODELLING</button>
+          <button class="team-pill" data-subsystem="testing">TESTING</button>
+          <button class="team-pill" data-subsystem="operations">SPONSORSHIP &amp; OPS</button>
+          <button class="team-pill" data-subsystem="web-media">WEB &amp; MEDIA</button>
         </div>
 
-        <!-- Team Cards Grid (Strict Placeholders - No fabricated identities) -->
+        <!-- Team Division Cards Grid -->
         <div class="team-grid" id="teamGrid">
 
-          <!-- Member 1: Leadership -->
-          <div class="team-card" data-subsystem="lead">
-            <div class="team-photo-box">
-              <div class="avatar-placeholder">
-                <i class="fas fa-user-astronaut"></i>
-                <span class="avatar-tag">LEADERSHIP</span>
+          <!-- 1. Computer Vision -->
+          <div class="division-card" data-subsystem="software-cv">
+            <div class="division-top-row">
+              <div class="division-title-group">
+                <i class="fas fa-eye division-icon"></i>
+                <h4 class="division-name">Computer Vision</h4>
               </div>
+              <span class="division-code">DIV // CV-01</span>
             </div>
-            <div class="team-info">
-              <span class="member-dept">TEAM LEADERSHIP</span>
-              <h3 class="member-name">[MEMBER NAME PLACEHOLDER]</h3>
-              <p class="member-role">Team Captain / Project Lead</p>
-              <div class="member-links">
-                <a href="https://www.instagram.com/teamvayu.iemk/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              </div>
+            <div class="division-lead-box">
+              <span class="lead-tag-label">DIVISION LEAD</span>
+              <span class="lead-person-name">Rishin</span>
             </div>
-          </div>
-
-          <!-- Member 2: Aerodynamics -->
-          <div class="team-card" data-subsystem="aero">
-            <div class="team-photo-box">
-              <div class="avatar-placeholder">
-                <i class="fas fa-wind"></i>
-                <span class="avatar-tag">AERO</span>
-              </div>
-            </div>
-            <div class="team-info">
-              <span class="member-dept">AERODYNAMICS &amp; CFD</span>
-              <h3 class="member-name">[MEMBER NAME PLACEHOLDER]</h3>
-              <p class="member-role">Aerodynamics Lead Engineer</p>
-              <div class="member-links">
-                <a href="https://www.instagram.com/teamvayu.iemk/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <p class="division-scope">
+              Autonomous visual odometry, onboard object detection, optical target recognition, and precision drop point tracking.
+            </p>
+            <div class="division-members-block">
+              <span class="members-heading">CONTRIBUTING CREW:</span>
+              <div class="member-pills-row">
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Swarnavo</span>
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Sutavra</span>
               </div>
             </div>
           </div>
 
-          <!-- Member 3: Avionics -->
-          <div class="team-card" data-subsystem="avionics">
-            <div class="team-photo-box">
-              <div class="avatar-placeholder">
-                <i class="fas fa-microchip"></i>
-                <span class="avatar-tag">AVIONICS</span>
+          <!-- 2. Simulation -->
+          <div class="division-card" data-subsystem="simulation">
+            <div class="division-top-row">
+              <div class="division-title-group">
+                <i class="fas fa-wind division-icon"></i>
+                <h4 class="division-name">Simulation</h4>
               </div>
+              <span class="division-code">DIV // SIM-02</span>
             </div>
-            <div class="team-info">
-              <span class="member-dept">AVIONICS &amp; CIRCUITS</span>
-              <h3 class="member-name">[MEMBER NAME PLACEHOLDER]</h3>
-              <p class="member-role">Avionics Lead Engineer</p>
-              <div class="member-links">
-                <a href="https://www.instagram.com/teamvayu.iemk/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              </div>
+            <div class="division-lead-box">
+              <span class="lead-tag-label">DIVISION LEAD</span>
+              <span class="lead-person-name">Bijoy</span>
             </div>
-          </div>
-
-          <!-- Member 4: Propulsion -->
-          <div class="team-card" data-subsystem="propulsion">
-            <div class="team-photo-box">
-              <div class="avatar-placeholder">
-                <i class="fas fa-fan"></i>
-                <span class="avatar-tag">PROPULSION</span>
-              </div>
-            </div>
-            <div class="team-info">
-              <span class="member-dept">PROPULSION &amp; POWER</span>
-              <h3 class="member-name">[MEMBER NAME PLACEHOLDER]</h3>
-              <p class="member-role">Propulsion Systems Engineer</p>
-              <div class="member-links">
-                <a href="https://www.instagram.com/teamvayu.iemk/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <p class="division-scope">
+              Flight dynamic modeling, MATLAB &amp; Simulink autopilot loops, computational CFD flow studies, and aerodynamic stability derivatives.
+            </p>
+            <div class="division-members-block">
+              <span class="members-heading">CONTRIBUTING CREW:</span>
+              <div class="member-pills-row">
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Iman</span>
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Sangita</span>
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Archit</span>
               </div>
             </div>
           </div>
 
-          <!-- Member 5: Manufacturing -->
-          <div class="team-card" data-subsystem="manufacturing">
-            <div class="team-photo-box">
-              <div class="avatar-placeholder">
-                <i class="fas fa-tools"></i>
-                <span class="avatar-tag">MANUFACTURING</span>
+          <!-- 3. Airframe and Avionics -->
+          <div class="division-card" data-subsystem="avionics">
+            <div class="division-top-row">
+              <div class="division-title-group">
+                <i class="fas fa-microchip division-icon"></i>
+                <h4 class="division-name">Airframe &amp; Avionics</h4>
               </div>
+              <span class="division-code">DIV // AVN-03</span>
             </div>
-            <div class="team-info">
-              <span class="member-dept">MANUFACTURING &amp; COMPOSITES</span>
-              <h3 class="member-name">[MEMBER NAME PLACEHOLDER]</h3>
-              <p class="member-role">Structures &amp; Fab Lead</p>
-              <div class="member-links">
-                <a href="https://www.instagram.com/teamvayu.iemk/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <div class="division-lead-box">
+              <span class="lead-tag-label">DIVISION LEAD</span>
+              <span class="lead-person-name">Tejas</span>
+            </div>
+            <p class="division-scope">
+              Embedded flight controllers, telemetry transceiver integration, sensor bus architecture, power distribution boards, and wiring harnesses.
+            </p>
+            <div class="division-members-block">
+              <span class="members-heading">CONTRIBUTING CREW:</span>
+              <div class="member-pills-row">
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Hricha</span>
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Shubhranil</span>
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Arkadeep</span>
               </div>
             </div>
           </div>
 
-          <!-- Member 6: Software -->
-          <div class="team-card" data-subsystem="software">
-            <div class="team-photo-box">
-              <div class="avatar-placeholder">
-                <i class="fas fa-code"></i>
-                <span class="avatar-tag">SOFTWARE</span>
+          <!-- 4. Manufacturing -->
+          <div class="division-card" data-subsystem="manufacturing">
+            <div class="division-top-row">
+              <div class="division-title-group">
+                <i class="fas fa-tools division-icon"></i>
+                <h4 class="division-name">Manufacturing</h4>
+              </div>
+              <span class="division-code">DIV // FAB-04</span>
+            </div>
+            <div class="division-lead-box">
+              <span class="lead-tag-label">DIVISION LEAD</span>
+              <span class="lead-person-name">Hricha</span>
+            </div>
+            <p class="division-scope">
+              Carbon composite vacuum bagging, CNC foam hot-wire cutting, spar-to-rib bonding, 3D printing custom brackets, and airframe assembly.
+            </p>
+            <div class="division-members-block">
+              <span class="members-heading">CONTRIBUTING CREW:</span>
+              <div class="member-pills-row">
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Tejas</span>
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Iman</span>
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Vineet</span>
               </div>
             </div>
-            <div class="team-info">
-              <span class="member-dept">SOFTWARE &amp; AUTONOMY</span>
-              <h3 class="member-name">[MEMBER NAME PLACEHOLDER]</h3>
-              <p class="member-role">Autopilot &amp; GCS Developer</p>
-              <div class="member-links">
-                <a href="https://www.instagram.com/teamvayu.iemk/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+
+          <!-- 5. Propulsion System -->
+          <div class="division-card" data-subsystem="propulsion">
+            <div class="division-top-row">
+              <div class="division-title-group">
+                <i class="fas fa-fan division-icon"></i>
+                <h4 class="division-name">Propulsion System</h4>
+              </div>
+              <span class="division-code">DIV // PRP-05</span>
+            </div>
+            <div class="division-lead-box">
+              <span class="lead-tag-label">DIVISION LEAD</span>
+              <span class="lead-person-name">Arkadeep</span>
+            </div>
+            <p class="division-scope">
+              Static thrust test bench characterization, brushless motor dynamic balancing, ESC timing configuration, and battery cell health monitoring.
+            </p>
+            <div class="division-members-block">
+              <span class="members-heading">CONTRIBUTING CREW:</span>
+              <div class="member-pills-row">
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Deborpita</span>
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Ashmit</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Payload Delivery System -->
+          <div class="division-card" data-subsystem="payload">
+            <div class="division-top-row">
+              <div class="division-title-group">
+                <i class="fas fa-box-open division-icon"></i>
+                <h4 class="division-name">Payload Delivery</h4>
+              </div>
+              <span class="division-code">DIV // PLD-06</span>
+            </div>
+            <div class="division-lead-box">
+              <span class="lead-tag-label">DIVISION LEAD</span>
+              <span class="lead-person-name">Vineet</span>
+            </div>
+            <p class="division-scope">
+              Electromechanical servo release bays, aerodynamic payload drop stabilization, dampening parachutes, and cargo security containment.
+            </p>
+            <div class="division-members-block">
+              <span class="members-heading">CONTRIBUTING CREW:</span>
+              <div class="member-pills-row">
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Pathikrit</span>
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Satyam</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. CAD Modelling -->
+          <div class="division-card" data-subsystem="cad">
+            <div class="division-top-row">
+              <div class="division-title-group">
+                <i class="fas fa-drafting-compass division-icon"></i>
+                <h4 class="division-name">CAD Modelling</h4>
+              </div>
+              <span class="division-code">DIV // CAD-07</span>
+            </div>
+            <div class="division-lead-box">
+              <span class="lead-tag-label">DIVISION LEAD</span>
+              <span class="lead-person-name">Iman</span>
+            </div>
+            <p class="division-scope">
+              SolidWorks parametric design, structural FEA stress analysis, center-of-gravity balancing, and digital assembly tolerance inspection.
+            </p>
+            <div class="division-members-block">
+              <span class="members-heading">CONTRIBUTING CREW:</span>
+              <div class="member-pills-row">
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Pathikrit</span>
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Tejas</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Testing & QA -->
+          <div class="division-card" data-subsystem="testing">
+            <div class="division-top-row">
+              <div class="division-title-group">
+                <i class="fas fa-vial-circle-check division-icon"></i>
+                <h4 class="division-name">Testing &amp; Flight Ops</h4>
+              </div>
+              <span class="division-code">DIV // TST-08</span>
+            </div>
+            <div class="division-lead-box">
+              <span class="lead-tag-label">DIVISION LEAD</span>
+              <span class="lead-person-name">Joy</span>
+            </div>
+            <p class="division-scope">
+              Pre-flight safety checklists, bench hardware-in-the-loop (HIL) simulations, airfield maiden flight testing, and telemetry data reduction.
+            </p>
+            <div class="division-members-block">
+              <span class="members-heading">CONTRIBUTING CREW:</span>
+              <div class="member-pills-row">
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Iman</span>
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Bijoy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Documentation and Sponsorship -->
+          <div class="division-card" data-subsystem="operations">
+            <div class="division-top-row">
+              <div class="division-title-group">
+                <i class="fas fa-file-lines division-icon"></i>
+                <h4 class="division-name">Documentation &amp; Sponsorship</h4>
+              </div>
+              <span class="division-code">DIV // OPS-09</span>
+            </div>
+            <div class="division-lead-box">
+              <span class="lead-tag-label">DIVISION LEADS</span>
+              <span class="lead-person-name">Paridhi &amp; Shubhranil (Co-Lead)</span>
+            </div>
+            <p class="division-scope">
+              Technical design reports (TDR), industrial corporate sponsorship outreach, budget allocation, compliance rules, and competition dossiers.
+            </p>
+            <div class="division-members-block">
+              <span class="members-heading">CONTRIBUTING CREW:</span>
+              <div class="member-pills-row">
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Tejas</span>
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Sarvani</span>
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Sangita</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Webmaster and Social Media -->
+          <div class="division-card" data-subsystem="web-media">
+            <div class="division-top-row">
+              <div class="division-title-group">
+                <i class="fas fa-globe division-icon"></i>
+                <h4 class="division-name">Webmaster &amp; Social Media</h4>
+              </div>
+              <span class="division-code">DIV // MED-10</span>
+            </div>
+            <div class="division-lead-box">
+              <span class="lead-tag-label">DIVISION LEAD</span>
+              <span class="lead-person-name">Pathikrit</span>
+            </div>
+            <p class="division-scope">
+              Team VAYU digital headquarters web engineering, repository administration, telemetry portal maintenance, and @teamvayu.iemk public dispatches.
+            </p>
+            <div class="division-members-block">
+              <span class="members-heading">CONTRIBUTING CREW:</span>
+              <div class="member-pills-row">
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Ashmit</span>
+                <span class="member-chip"><i class="fas fa-user-gear"></i> Arkadeep</span>
               </div>
             </div>
           </div>

@@ -26,7 +26,25 @@ window.VAYU_DATA = {
     handle: "@teamvayu.iemk",
     email: "contact@teamvayu.in"
   },
-  // Additional dynamic data hooks can be populated here in Stage 2
+  team: {
+    coreLeadership: [
+      { name: "Iman", role: "Team Captain & CAD Lead", callsign: "VAYU-01" },
+      { name: "Swarnavo", role: "Software Lead", callsign: "VAYU-02" },
+      { name: "Arkadeep", role: "Hardware & Propulsion Lead", callsign: "VAYU-03" }
+    ],
+    divisions: [
+      { division: "Computer Vision", lead: "Rishin", members: ["Swarnavo", "Sutavra"], subsystem: "software-cv" },
+      { division: "Simulation", lead: "Bijoy", members: ["Iman", "Sangita", "Archit"], subsystem: "simulation" },
+      { division: "Airframe and Avionics", lead: "Tejas", members: ["Hricha", "Shubhranil", "Arkadeep"], subsystem: "avionics" },
+      { division: "Manufacturing", lead: "Hricha", members: ["Tejas", "Iman", "Vineet"], subsystem: "manufacturing" },
+      { division: "Propulsion System", lead: "Arkadeep", members: ["Deborpita", "Ashmit"], subsystem: "propulsion" },
+      { division: "Payload Delivery System", lead: "Vineet", members: ["Pathikrit", "Satyam"], subsystem: "payload" },
+      { division: "CAD Modelling", lead: "Iman", members: ["Pathikrit", "Tejas"], subsystem: "cad" },
+      { division: "Testing & QA", lead: "Joy", members: ["Iman", "Bijoy"], subsystem: "testing" },
+      { division: "Documentation & Sponsorship", lead: "Paridhi & Shubhranil (Co-Lead)", members: ["Tejas", "Sarvani", "Sangita"], subsystem: "operations" },
+      { division: "Webmaster & Social Media", lead: "Pathikrit", members: ["Ashmit", "Arkadeep"], subsystem: "web-media" }
+    ]
+  }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -234,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
      06. TEAM SUBSYSTEM FILTER
      ------------------------------------------------------------------------ */
   const teamPills = document.querySelectorAll('#teamFilterBar .team-pill');
-  const teamCards = document.querySelectorAll('.team-card');
+  const divisionCards = document.querySelectorAll('.division-card');
 
   teamPills.forEach(pill => {
     pill.addEventListener('click', () => {
@@ -243,10 +261,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const subsystem = pill.getAttribute('data-subsystem');
 
-      teamCards.forEach(card => {
+      divisionCards.forEach(card => {
         const cardSub = card.getAttribute('data-subsystem');
         if (subsystem === 'all' || cardSub === subsystem) {
-          card.style.display = 'block';
+          card.style.display = 'flex';
           card.style.opacity = '0';
           setTimeout(() => {
             card.style.transition = 'opacity 0.35s ease';
